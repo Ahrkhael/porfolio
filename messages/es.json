@@ -1,0 +1,11 @@
+{
+  "Navbar": {
+    "Home": "Inicio",
+    "About": "Quién soy",
+    "Projects": "Proyectos"
+  },
+  "HomePage": {
+    "title": "Hola mundo!",
+    "about": "Ir a la página about"
+  }
+}

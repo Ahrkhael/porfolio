@@ -2,7 +2,12 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+
+  --font-color-primary: #021f3c;
+  --font-color-secondary: #f1f1f1;
+  --font-color-menu-secondary: rgb(135, 230, 255);
+
+  --background-navbar-rgb: 15, 19, 37;
 }
 
 @theme inline {
@@ -15,12 +20,18 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+
+    --font-color-primary: #f1f1f1;
+    --font-color-secondary: #ebeef1;
+
+    --background-navbar-rgb: 35, 34, 31;
+
+    --navbar-min-height: 45px;
   }
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
+  color: var(--font-color-primary);
   font-family: Arial, Helvetica, sans-serif;
 }
