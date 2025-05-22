@@ -7,7 +7,10 @@
   --font-color-secondary: #f1f1f1;
   --font-color-menu-secondary: rgb(135, 230, 255);
 
-  --background-navbar-rgb: 15, 19, 37;
+  --background-navbar-rgb: rgb(15, 19, 37);
+  --background-navbar-hover-rgb: rgb(79, 99, 147);
+
+  --dropdown-menu-border: rgb(20, 20, 20);
 }
 
 @theme inline {
@@ -24,9 +27,12 @@
     --font-color-primary: #f1f1f1;
     --font-color-secondary: #ebeef1;
 
-    --background-navbar-rgb: 35, 34, 31;
+    --background-navbar-rgb: rgb(35, 34, 31);
+    --background-navbar-hover-rgb: rgb(24, 24, 24);
 
     --navbar-min-height: 45px;
+
+    --dropdown-menu-border: rgb(100, 100, 100);
   }
 }
 
