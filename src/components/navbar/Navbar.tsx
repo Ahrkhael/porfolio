@@ -10,12 +10,12 @@ const Navbar: FC = () => {
       // fondo y sombra. min‑height se lo damos con style si usamos variable CSS.
       className="
         fixed top-0 left-0 w-full h-[7dvh] z-50 flex justify-center items-center
-        bg-[rgb(var(--background-navbar-rgb))] shadow-md
+        bg-(--background-navbar-rgb) shadow-md
       "
       style={{ minHeight: "var(--navbar-min-height)" }}
     >
       {/* Desktop: oculto en pantallas < md */}
-      <div className="hidden md:flex">
+      <div className="hidden md:flex w-full h-full">
         <NavbarDesktop />
       </div>
 
