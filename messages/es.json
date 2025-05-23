@@ -5,7 +5,7 @@
     "Projects": "Proyectos"
   },
   "HomePage": {
-    "title": "Hola mundo!",
-    "about": "Ir a la página about"
+    "Personal Card Title": "Juan José Saborido",
+    "Personal Card Description": "Desarrollador fullstack"
   }
 }

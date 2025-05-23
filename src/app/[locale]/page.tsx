@@ -1,12 +1,20 @@
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import Card from "@/components/card/Card";
 
 export default function HomePage() {
   const t = useTranslations("HomePage");
+
   return (
-    <div className="mt-[7dvh]">
-      <h1>{t("title")}</h1>
-      <Link href="/about">{t("about")}</Link>
-    </div>
+    <main className="py-[7dvh] px-[5dvw]">
+      <Card
+        title={t("Personal Card Title")}
+        description={t("Personal Card Description")}
+        imageUrl="/images/foto-cv.jpg"
+        imageAlt="Foto CV"
+        imagePosition="right"
+        aspectRatio="aspect-square"
+        borderRadius="full"
+      />
+    </main>
   );
 }
