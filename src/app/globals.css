@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #f9fafb;
 
-  --font-color-primary: #021f3c;
-  --font-color-secondary: #f1f1f1;
-  --font-color-menu-secondary: rgb(135, 230, 255);
+  --font-color-primary: #111827;
+  --font-color-secondary: #4b5563;
+  --font-color-menu-secondary: #3b82f6;
 
-  --background-navbar-rgb: rgb(15, 19, 37);
-  --background-navbar-hover-rgb: rgb(79, 99, 147);
+  --background-navbar-rgb: #f3f4f6;
+  --background-navbar-hover-rgb: #4b5563;
 
   --dropdown-menu-border: rgb(20, 20, 20);
 }
@@ -22,13 +22,13 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #0f172a;
 
-    --font-color-primary: #f1f1f1;
-    --font-color-secondary: #ebeef1;
+    --font-color-primary: #f8fafc;
+    --font-color-secondary: #94a3b8;
 
-    --background-navbar-rgb: rgb(35, 34, 31);
-    --background-navbar-hover-rgb: rgb(24, 24, 24);
+    --background-navbar-rgb: #1e293b;
+    --background-navbar-hover-rgb: #073e62;
 
     --navbar-min-height: 45px;
 
