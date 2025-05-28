@@ -1,4 +1,3 @@
-// components/Card.tsx
 import Image from "next/image";
 import clsx from "clsx";
 
@@ -34,7 +33,7 @@ export default function Card({
   }[borderRadius];
 
   return (
-    <div className="flex flex-col md:flex-row items-center gap-6 py-20 px-80 rounded-2xl shadow-md">
+    <div className="flex flex-col md:flex-row items-center mt-10 gap-6 px-60 py-20 bg-[var(--background-card)] border border-[var(--border-card)]">
       <div
         className={clsx(
           "relative w-full md:w-1/2",
@@ -54,7 +53,7 @@ export default function Card({
       <div
         className={clsx("w-full md:w-1/2", isImageLeft ? "order-2" : "order-1")}
       >
-        <h2 className="text-2xl font-bold mb-2">{title}</h2>
+        <p className="text-[2.5rem] font-bold mb-2">{title}</p>
         <p className="">{description}</p>
       </div>
     </div>
