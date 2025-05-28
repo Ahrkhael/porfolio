@@ -2,10 +2,30 @@
   "Navbar": {
     "Home": "Home",
     "About": "Who am I",
+    "Technologies": "Technologies",
     "Projects": "Projects"
   },
   "HomePage": {
     "Personal Card Title": "Juan José Saborido",
     "Personal Card Description": "Fullstack developer"
+  },
+  "AboutPage": {
+    "AboutMyself": {
+      "Title": "Background",
+      "Description": "Since 2021, I have developped different applications"
+    },
+    "Motivation": {
+      "Title": "What makes me happy about my job?",
+      "Description": "The wish to improve and look back and see how much I had been able to achieve"
+    },
+    "Studies": {
+      "Title": "Studies",
+      "1": {
+        "Certificate": "High Vocational Trainee Web Applications Development",
+        "Institution": "Ilerna FP",
+        "Link": "https://www.ilerna.es/"
+      },
+      "Description": "The wish to dsadsa"
+    }
   }
 }

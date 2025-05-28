@@ -21,8 +21,8 @@ const LangSelector = () => {
 
   const locales = ["en", "es"] as const;
   const flags: Record<(typeof locales)[number], string> = {
-    en: "flags/en.svg",
-    es: "flags/es.svg",
+    en: "/flags/en.svg",
+    es: "/flags/es.svg",
   };
 
   return (
@@ -44,7 +44,7 @@ const LangSelector = () => {
           <Link
             key={locale}
             href={`/${locale}${nonLocalizedPath}`}
-            className={`flex justify-center items-center h-[50px] px-4 py-2 border border-(--dropdown-menu-border) hover:bg-(--background-navbar-hover-rgb) text-sm hover:text-(--font-color-menu-secondary) ${
+            className={`flex justify-center items-center h-[50px] px-4 py-2 border border-(--dropdown-menu-border) hover:bg-(--background-navbar-hover-rgb) text-[18px] hover:text-(--font-color-menu-secondary) ${
               locale === currentLocale ? "pointer-events-none opacity-50" : ""
             }`}
           >
