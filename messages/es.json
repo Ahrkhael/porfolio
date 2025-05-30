@@ -6,8 +6,22 @@
     "Projects": "Proyectos"
   },
   "HomePage": {
-    "Personal Card Title": "Juan José Saborido",
-    "Personal Card Description": "Desarrollador fullstack"
+    "PersonalJob": "Desarrollador fullstack"
+  },
+  "PersonalCard": {
+    "Email": "Email: ",
+    "Phone": "Teléfono: ",
+    "Social": "Redes sociales: "
+  },
+  "Experience": {
+    "Title": "Experiencia laboral",
+    "1": {
+      "Job": "Desarrollador fullstack",
+      "Company": "Burst your ideas",
+      "Dates": "2024 - Presente",
+      "Description": "Como desarrollador fullstack trabajo \nEn el fronted con tecnologías como React, Next, Javascript, HTML, CSS, Tailwind y Typescript \nEn el backend, con tecnologías como Ruby on Rails y PostgreSQL\n Me dedico a crear diferentes páginas webs, corregir errores, crear componentes robustos, sólidos y reutilizables \ny a la creación y consumo de APIs, tanto internas como externas\nUtilizamos Git como herramienta de control de versiones, Slack y Trello para organizarnos el trabajo",
+      "Link": "https://burstyourideas.com/"
+    }
   },
   "AboutPage": {
     "AboutMyself": {
@@ -16,16 +30,6 @@
       "Description2": "En 2022 empecé el FP Superior de Desarrollo de Aplicaciones Web, terminándolo en 2024",
       "Description3": "Cuando terminé el ciclo formativo, la empresa donde realicé mis prácticas decidió retenerme dado que estuvieron muy contentos con mi labor desempeñada durante el periodo de prácticas y, la verdad, es que no les puedo estar más agradecido por dicha oportunidad",
       "Description4": "Y así llegamos al día de hoy, donde estoy buscando nuevos retos para poder seguir creciendo profesionalmente"
-    },
-    "Experience": {
-      "Title": "Experiencia laboral",
-      "1": {
-        "Job": "Desarrollador fullstack",
-        "Company": "Burst your ideas",
-        "Dates": "2024 - Presente",
-        "Description": "Como desarrollador fullstack trabajo \nEn el fronted con tecnologías como React, Next, Javascript, HTML, CSS, Tailwind y Typescript \nEn el backend, con tecnologías como Ruby on Rails y PostgreSQL\n Me dedico a crear diferentes páginas webs, corregir errores, crear componentes robustos, sólidos y reutilizables \ny a la creación y consumo de APIs, tanto internas como externas\nUtilizamos Git como herramienta de control de versiones, Slack y Trello para organizarnos el trabajo",
-        "Link": "https://burstyourideas.com/"
-      }
     },
     "Studies": {
       "Title": "Formación",

@@ -4,6 +4,8 @@ import ExperienceCard from "@/components/experienceCard/ExperienceCard";
 
 export default function AboutPage() {
   const t = useTranslations("AboutPage");
+  const tExperience = useTranslations("Experience");
+
   return (
     <main className="py-[7dvh] px-[5dvw]">
       <div className="w-[80dvw] mx-auto my-3">
@@ -21,18 +23,14 @@ export default function AboutPage() {
           {t("AboutMyself.Description4")}
         </p>
       </div>
-      <div className="my-6">
-        <p className="text-[36px] text-center my-2">{t("Experience.Title")}</p>
-        <div className="flex place-content-between gap-[10dvw] justify-center">
-          <ExperienceCard
-            title={t("Experience.1.Job")}
-            company={t("Experience.1.Company")}
-            description={t("Experience.1.Description")}
-            dates={t("Experience.1.Dates")}
-            link={t("Experience.1.Link")}
-          />
-        </div>
-      </div>
+      <ExperienceCard
+        title={tExperience("Title")}
+        job={tExperience("1.Job")}
+        company={tExperience("1.Company")}
+        description={tExperience("1.Description")}
+        dates={tExperience("1.Dates")}
+        link={tExperience("1.Link")}
+      />
       <div className="my-6">
         <p className="text-[36px] text-center my-2">{t("Studies.Title")}</p>
         <div className="flex place-content-between gap-[10dvw] justify-center">

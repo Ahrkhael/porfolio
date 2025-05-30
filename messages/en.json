@@ -6,8 +6,12 @@
     "Projects": "Projects"
   },
   "HomePage": {
-    "Personal Card Title": "Juan José Saborido",
-    "Personal Card Description": "Fullstack developer"
+    "PersonalJob": "Fullstack developer"
+  },
+  "PersonalCard": {
+    "Email": "Email: ",
+    "Phone": "Phone: ",
+    "Social": "Social media: "
   },
   "AboutPage": {
     "AboutMyself": {
