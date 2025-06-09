@@ -13,6 +13,22 @@
     "Phone": "Phone: ",
     "Social": "Social media: "
   },
+  "Experience": {
+    "Title": "Work experience",
+    "1": {
+      "Job": "Fullstack Developer",
+      "Company": "Burst your ideas",
+      "Dates": "2024 - Present",
+      "Description": "As a fullstack developer I work on \nFronted with technologies such as React, Next, Javascript, HTML, CSS, Tailwind and Typescript \nBackend with tecnnologies like Ruby on Rails and PostgreSQL\n I create different web pages, fixing errors, creating reusable components \nand creation and use of different APIs, both internals and third parties\nWe use Git as a version control tool, Slack and Trello to organize our work",
+      "Link": "https://burstyourideas.com/"
+    }
+  },
+  "Technologies": {
+    "Title": "Technologies",
+    "Front": "Frontend",
+    "Back": "Backend",
+    "Other": "Other technologies"
+  },
   "AboutPage": {
     "AboutMyself": {
       "Title": "Background",
