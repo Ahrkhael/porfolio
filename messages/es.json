@@ -23,6 +23,12 @@
       "Link": "https://burstyourideas.com/"
     }
   },
+  "Technologies": {
+    "Title": "Tecnologías",
+    "Front": "Frontend",
+    "Back": "Backend",
+    "Other": "Otras tecnologías"
+  },
   "AboutPage": {
     "AboutMyself": {
       "Title": "Conóceme mejor",

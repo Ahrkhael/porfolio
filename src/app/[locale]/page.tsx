@@ -1,10 +1,12 @@
 import { useTranslations } from "next-intl";
 import PersonalCard from "@/components/personalCard/PersonalCard";
 import ExperienceCard from "@/components/experienceCard/ExperienceCard";
+import TechnologiesCard from "@/components/technologiesCard/TechnologiesCard";
 
 export default function HomePage() {
   const t = useTranslations("HomePage");
   const tExperience = useTranslations("Experience");
+  const tTechnologies = useTranslations("Technologies");
 
   // Personal data
   const name = process.env.PERSONAL_NAME || "Name";
@@ -37,6 +39,12 @@ export default function HomePage() {
         description={tExperience("1.Description")}
         dates={tExperience("1.Dates")}
         link={tExperience("1.Link")}
+      />
+      <TechnologiesCard
+        title={tTechnologies("Title")}
+        front={tTechnologies("Front")}
+        back={tTechnologies("Back")}
+        other={tTechnologies("Other")}
       />
     </main>
   );
