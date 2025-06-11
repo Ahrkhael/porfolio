@@ -13,7 +13,6 @@ type PersonalCardProps = {
   gitHub: string;
   imageUrl: string;
   imageAlt?: string;
-  imagePosition?: "left" | "right";
   aspectRatio?: string;
   borderRadius?: "none" | "md" | "lg" | "xl" | "2xl" | "full";
 };
@@ -28,12 +27,9 @@ export default function PersonalCard({
   gitHub,
   imageUrl,
   imageAlt = "",
-  imagePosition = "left",
   aspectRatio = "aspect-[4/3]",
   borderRadius = "xl",
 }: PersonalCardProps) {
-  const isImageLeft = imagePosition === "left";
-
   // Mapeo del valor prop a clase Tailwind
   const borderRadiusClass = {
     none: "rounded-none",
@@ -47,26 +43,8 @@ export default function PersonalCard({
   const t = useTranslations("PersonalCard");
 
   return (
-    <div className="flex flex-col md:flex-row items-center h-[450px] mt-10 gap-6 px-60 py-20 bg-[var(--background-card)] border border-[var(--border-card)]">
-      <div
-        className={clsx(
-          "relative max-w-[350px] max-h-[350px] min-w-[200px] min-h-[200px] w-full md:w-1/2",
-          aspectRatio,
-          isImageLeft ? "order-1" : "order-2"
-        )}
-      >
-        <Image
-          src={imageUrl}
-          alt={imageAlt}
-          fill
-          className={clsx("object-cover", borderRadiusClass)}
-          sizes="(max-width: 768px) 100vw, 50vw"
-        />
-      </div>
-
-      <div
-        className={clsx("w-full md:w-1/2", isImageLeft ? "order-2" : "order-1")}
-      >
+    <>
+      <div className={clsx("w-full md:w-1/2")}>
         <p className="text-[2.5rem] font-bold">{name}</p>
         <p className="text-[2.5rem] font-bold mb-2">{surname}</p>
         <p className="">{job}</p>
@@ -108,6 +86,21 @@ export default function PersonalCard({
           </Link>
         </div>
       </div>
-    </div>
+
+      <div
+        className={clsx(
+          "relative max-w-[350px] max-h-[350px] min-w-[200px] min-h-[200px] w-full md:w-1/2",
+          aspectRatio
+        )}
+      >
+        <Image
+          src={imageUrl}
+          alt={imageAlt}
+          fill
+          className={clsx("object-cover", borderRadiusClass)}
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
+      </div>
+    </>
   );
 }

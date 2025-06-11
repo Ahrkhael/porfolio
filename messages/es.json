@@ -5,8 +5,9 @@
     "Technologies": "Tecnologías",
     "Projects": "Proyectos"
   },
-  "HomePage": {
-    "PersonalJob": "Desarrollador fullstack"
+  "PersonalInfo": {
+    "PersonalJob": "Desarrollador fullstack",
+    "PhotoAlt": "Foto Personal"
   },
   "PersonalCard": {
     "Email": "Email: ",

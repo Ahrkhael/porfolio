@@ -2,7 +2,7 @@ import IconsWithTitle from "../../iconsWithTitle/IconsWithTitle";
 
 export default function FrontendTechnologies() {
   return (
-    <div className="flex flex-row justify-around text-center">
+    <div className="flex flex-wrap justify-around text-center">
       <IconsWithTitle
         src="/icons/nextjs.svg"
         width={50}

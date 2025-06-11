@@ -2,7 +2,7 @@ import IconsWithTitle from "../../iconsWithTitle/IconsWithTitle";
 
 export default function BackendTechnologies() {
   return (
-    <div className="flex flex-row justify-around text-center">
+    <div className="flex flex-wrap justify-around text-center">
       <IconsWithTitle
         src="/icons/ruby.svg"
         width={50}
