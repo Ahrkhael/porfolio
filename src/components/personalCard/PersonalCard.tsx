@@ -44,7 +44,7 @@ export default function PersonalCard({
 
   return (
     <>
-      <div className={clsx("w-full md:w-1/2")}>
+      <div className={clsx("w-full md:w-1/2 lg:pl-20 md:pl-10")}>
         <p className="text-[2.5rem] font-bold">{name}</p>
         <p className="text-[2.5rem] font-bold mb-2">{surname}</p>
         <p className="">{job}</p>
