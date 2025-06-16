@@ -6,8 +6,6 @@ import NavbarMobile from "./navbarMobile/NavbarMobile";
 const Navbar: FC = () => {
   return (
     <header
-      // fixed en top, ancho completo, altura dinámica, flex centradito,
-      // fondo y sombra. min‑height se lo damos con style si usamos variable CSS.
       className="
         fixed top-0 left-0 w-full h-[7dvh] z-50 flex justify-center items-center
         bg-(--background-navbar-rgb) shadow-md
