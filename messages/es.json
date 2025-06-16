@@ -30,6 +30,38 @@
     "Back": "Backend",
     "Other": "Otras tecnologías"
   },
+  "Projects": {
+    "Title": "Proyectos",
+    "1": {
+      "Title": "Ajedrez",
+      "ShortDescription": "Clásico juego de ajedrez perfecto para enseñar, estudiar o sencillamente jugar con alguien a tu lado. Programado desde 0 usando simplemente Javascript, HTML y CSS (lógica desde cero, sin librerías externas, excepto la de Google Fonts)"
+    },
+    "2": {
+      "Title": "Traveling-app",
+      "ShortDescription": "Web que ofrece a los usuarios diferentes destinos turísticos para su próxima escapada. Hecha en NextJS 15 y con dependencias de React 19, leaflet, next-intl, nodemailer y lqip, entre otras"
+    }
+  },
+  "Studies": {
+    "Title": "Formación",
+    "1": {
+      "Certificate": "FP Superior DAW \n Desarrollo Aplicaciones Web",
+      "Institution": "Ilerna FP",
+      "Dates": "Septiembre 2022 - Junio 2024",
+      "Link": "https://www.ilerna.es/"
+    },
+    "2": {
+      "Certificate": "First Certificate in English \nB2 Level",
+      "Institution": "Cambridge",
+      "Dates": "Julio 2019",
+      "Link": "https://www.cambridgeenglish.org/es/exams-and-tests/first/"
+    },
+    "3": {
+      "Certificate": "Grado Ingeniería Química",
+      "Institution": "Universidad de Cádiz",
+      "Dates": "Septiembre 2013 - Junio 2019",
+      "Link": "https://www.uca.es/"
+    }
+  },
   "AboutPage": {
     "AboutMyself": {
       "Title": "Conóceme mejor",
@@ -59,5 +91,8 @@
         "Link": "https://www.uca.es/"
       }
     }
+  },
+  "NotFoundPage": {
+    "Description": "404 | Página no encontrada"
   }
 }

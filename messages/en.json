@@ -30,6 +30,38 @@
     "Back": "Backend",
     "Other": "Other technologies"
   },
+  "Projects": {
+    "Title": "Projects",
+    "1": {
+      "Title": "Chess",
+      "ShortDescription": "Classic chess game made for teaching, studying or just playing a game with someone at your side. Programmed from 0 using simply Javascript, HTML and CSS (logic from zero, no external libraries, except for Google Fonts)"
+    },
+    "2": {
+      "Title": "Traveling-app",
+      "ShortDescription": "Website that offers users different tourist destinations for their next holidays. Made in NextJS 15 and with dependencies on React 19, leaflet, next-intl, nodemailer and lqip, among others."
+    }
+  },
+  "Studies": {
+    "Title": "Formación",
+    "1": {
+      "Certificate": "High Vocational Trainee \n Web Applications Development",
+      "Institution": "Ilerna FP",
+      "Dates": "September 2022 - June 2024",
+      "Link": "https://www.ilerna.es/"
+    },
+    "2": {
+      "Certificate": "First Certificate in English \nB2 Level",
+      "Institution": "Cambridge",
+      "Dates": "July 2019",
+      "Link": "https://www.cambridgeenglish.org/es/exams-and-tests/first/"
+    },
+    "3": {
+      "Certificate": "Bachelor's Degree \n Chemical Engineering",
+      "Institution": "University of Cádiz",
+      "Dates": "September 2013 - June 2019",
+      "Link": "https://www.uca.es/"
+    }
+  },
   "AboutPage": {
     "AboutMyself": {
       "Title": "Background",
@@ -48,5 +80,8 @@
       },
       "Description": "The wish to dsadsa"
     }
+  },
+  "NotFoundPage": {
+    "Description": "404 | Page not found"
   }
 }
