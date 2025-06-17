@@ -12,7 +12,7 @@ export default function StudiesCard({
   link = "",
 }: StudiesCardProps) {
   return (
-    <div className="flex flex-col w-[350px] py-6 bg-[var(--background-card-secondary)]">
+    <div className="flex flex-col w-[350px] min-w-[350px] h-[300px] min-h-[300px]: py-6 bg-[var(--background-card-secondary)]">
       <p className="h-[60px] text-center whitespace-pre-line mx-5 my-2">
         {title}
       </p>

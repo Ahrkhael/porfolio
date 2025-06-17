@@ -23,7 +23,12 @@ export default function HomePage() {
 
   return (
     <main className="py-[7dvh]">
-      <Section className="flex-row items-center h-[450px] gap-6">
+      <Section
+        className="
+          items-center justify-center gap-6 text-center
+          md:flex-row  md:px-20 md:h-[450px] md:text-left
+        "
+      >
         <PersonalCard
           name={name}
           surname={surname}
@@ -40,7 +45,7 @@ export default function HomePage() {
       </Section>
 
       <Section title={tProjects("Title")} className="py-20">
-        <div className="flex flex-rox justify-around">
+        <div className="grid grid-cols-1 md:grid-cols-2 place-items-center gap-10">
           <ProjectCard
             url="https://chess-three-alpha.vercel.app/"
             imageUrl="/images/project-chess.jpg"
