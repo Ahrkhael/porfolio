@@ -25,15 +25,21 @@ export default function ProjectCard({
       target="blank"
       href={url}
       className={clsx(
-        "flex",
+        "flex my-10 align-middle ",
         isVertical ? "flex-col items-center" : "flex-row",
-        reverse && "flex-col-reverse md:flex-row-reverse"
+        reverse && (isVertical ? "flex-col-reverse" : "md:flex-row-reverse"),
+        "w-full h-full max-w-[500px]"
       )}
     >
-      <div className="relative w-[350px] h-[20px] md:h-[350px]">
-        <Image src={imageUrl} alt={imageAlt} fill className="object-cover" />
+      <div className="relative w-full max-w-[350px] aspect-square">
+        <Image
+          src={imageUrl}
+          alt={imageAlt}
+          fill
+          className="object-cover rounded-md"
+        />
       </div>
-      <div className="text-center w-[30dvw] p-4">{children}</div>
+      <div className="text-center w-full max-w-[400px] p-4">{children}</div>
     </Link>
   );
 }
