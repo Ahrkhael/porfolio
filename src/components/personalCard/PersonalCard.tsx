@@ -96,7 +96,7 @@ export default function PersonalCard({
 
       <div
         className={clsx(
-          "relative max-w-[350px] max-h-[350px] min-w-[200px] min-h-[200px] w-full md:w-1/2",
+          "relative max-w-[300px] w-[60dvw] my-4 md:my-0",
           aspectRatio
         )}
       >
@@ -105,7 +105,7 @@ export default function PersonalCard({
           alt={imageAlt}
           fill
           className={clsx("object-cover", borderRadiusClass)}
-          sizes="(max-width: 768px) 100vw, 50vw"
+          sizes="(max-width: 768px) 60dvw, 300px"
         />
       </div>
     </>

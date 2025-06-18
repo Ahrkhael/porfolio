@@ -84,7 +84,12 @@ export default function HomePage() {
       </Section>
 
       <Section title={tStudies("Title")} className="py-20">
-        <div className="flex justify-around">
+        <div
+          className="
+        flex flex-col flex-wrap justify-around items-center gap-4
+        md:flex-row
+        "
+        >
           <StudiesCard
             title={tStudies("1.Certificate")}
             institution={tStudies("1.Institution")}
