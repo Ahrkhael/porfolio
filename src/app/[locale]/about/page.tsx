@@ -6,20 +6,21 @@ import Section from "@/components/section/Section";
 export default function AboutPage() {
   const t = useTranslations("AboutPage");
   const tExperience = useTranslations("Experience");
+  const tStudies = useTranslations("Studies");
 
   return (
     <main className="py-[7dvh]">
       <Section title={t("AboutMyself.Title")}>
-        <p className="text-[20px] text-center my-2">
+        <p className="text-[20px] text-center my-2 px-6 md:px-20">
           {t("AboutMyself.Description")}
         </p>
-        <p className="text-[20px] text-center my-2">
+        <p className="text-[20px] text-center my-2 px-6 md:px-20">
           {t("AboutMyself.Description2")}
         </p>
-        <p className="text-[20px] text-center my-2">
+        <p className="text-[20px] text-center my-2 px-6 md:px-20">
           {t("AboutMyself.Description3")}
         </p>
-        <p className="text-[20px] text-center my-2">
+        <p className="text-[20px] text-center my-2 px-6 md:px-20">
           {t("AboutMyself.Description4")}
         </p>
       </Section>
@@ -34,25 +35,25 @@ export default function AboutPage() {
         />
       </Section>
 
-      <Section title={t("Studies.Title")}>
+      <Section title={tStudies("Title")}>
         <div className="flex flex-col md:flex-row flex-wrap gap-[10px] justify-around items-center">
           <StudiesCard
-            title={t("Studies.1.Certificate")}
-            institution={t("Studies.1.Institution")}
-            dates={t("Studies.1.Dates")}
-            link={t("Studies.1.Link")}
+            title={tStudies("1.Certificate")}
+            institution={tStudies("1.Institution")}
+            dates={tStudies("1.Dates")}
+            link={tStudies("1.Link")}
           />
           <StudiesCard
-            title={t("Studies.2.Certificate")}
-            institution={t("Studies.2.Institution")}
-            dates={t("Studies.2.Dates")}
-            link={t("Studies.2.Link")}
+            title={tStudies("2.Certificate")}
+            institution={tStudies("2.Institution")}
+            dates={tStudies("2.Dates")}
+            link={tStudies("2.Link")}
           />
           <StudiesCard
-            title={t("Studies.3.Certificate")}
-            institution={t("Studies.3.Institution")}
-            dates={t("Studies.3.Dates")}
-            link={t("Studies.3.Link")}
+            title={tStudies("3.Certificate")}
+            institution={tStudies("3.Institution")}
+            dates={tStudies("3.Dates")}
+            link={tStudies("3.Link")}
           />
         </div>
       </Section>

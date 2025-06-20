@@ -12,24 +12,29 @@ const NavbarDesktop: FC = () => {
         <Link href="/" className="hover:text-(--font-color-menu-secondary)">
           {t("Home")}
         </Link>
+
         <Link
           href="/about"
           className="hover:text-(--font-color-menu-secondary)"
         >
           {t("About")}
         </Link>
+
+        {/* In Progress */}
+        {/*         
         <Link
           href="/technologies"
           className="hover:text-(--font-color-menu-secondary)"
         >
           {t("Technologies")}
-        </Link>
-        <Link
+        </Link> */}
+
+        {/* <Link
           href="/projects"
           className="hover:text-(--font-color-menu-secondary)"
         >
           {t("Projects")}
-        </Link>
+        </Link> */}
 
         <LangSelector />
       </div>

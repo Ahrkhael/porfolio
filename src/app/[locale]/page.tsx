@@ -1,4 +1,5 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import { getBlurDataURL } from "@/utils/getBlurDataURL";
 import Section from "@/components/section/Section";
 import PersonalCard from "@/components/personalCard/PersonalCard";
 import ExperienceCard from "@/components/experienceCard/ExperienceCard";
@@ -6,12 +7,18 @@ import TechnologiesCard from "@/components/technologiesCard/TechnologiesCard";
 import ProjectCard from "@/components/projectCard/ProjectCard";
 import StudiesCard from "@/components/studiesCard/StudiesCard";
 
-export default function HomePage() {
-  const tPersonalInfo = useTranslations("PersonalInfo");
-  const tExperience = useTranslations("Experience");
-  const tTechnologies = useTranslations("Technologies");
-  const tProjects = useTranslations("Projects");
-  const tStudies = useTranslations("Studies");
+export default async function HomePage() {
+  const blurDataURLCV = await getBlurDataURL("/images/foto-cv.jpg");
+  const blurDataURLChess = await getBlurDataURL("/images/project-chess.jpg");
+  const blurDataURLTravelingApp = await getBlurDataURL(
+    "/images/project-traveling-app.jpg"
+  );
+
+  const tPersonalInfo = await getTranslations("PersonalInfo");
+  const tExperience = await getTranslations("Experience");
+  const tTechnologies = await getTranslations("Technologies");
+  const tProjects = await getTranslations("Projects");
+  const tStudies = await getTranslations("Studies");
 
   // Personal data
   const name = process.env.PERSONAL_NAME || "name";
@@ -26,7 +33,7 @@ export default function HomePage() {
       <Section
         className="
           items-center justify-center gap-6 text-center
-          md:flex-row  md:px-20 md:h-[450px] md:text-left
+          md:flex-row  md:p-20 md:text-left
         "
       >
         <PersonalCard
@@ -39,6 +46,7 @@ export default function HomePage() {
           job={tPersonalInfo("PersonalJob")}
           imageUrl="/images/foto-cv.jpg"
           imageAlt={tPersonalInfo("PhotoAlt")}
+          blurDataURL={blurDataURLCV}
           aspectRatio="aspect-square"
           borderRadius="full"
         />
@@ -49,6 +57,7 @@ export default function HomePage() {
           <ProjectCard
             url="https://chess-three-alpha.vercel.app/"
             imageUrl="/images/project-chess.jpg"
+            blurDataURL={blurDataURLChess}
             imagePosition="top"
           >
             <p className="my-2 font-bold text-[24px]">{tProjects("1.Title")}</p>
@@ -57,6 +66,7 @@ export default function HomePage() {
           <ProjectCard
             url="https://traveling-app-steel.vercel.app/"
             imageUrl="/images/project-traveling-app.jpg"
+            blurDataURL={blurDataURLTravelingApp}
             imagePosition="top"
           >
             <p className="my-2 font-bold text-[24px]">{tProjects("2.Title")}</p>
@@ -84,7 +94,12 @@ export default function HomePage() {
       </Section>
 
       <Section title={tStudies("Title")} className="py-20">
-        <div className="flex justify-around">
+        <div
+          className="
+        flex flex-col flex-wrap justify-around items-center gap-4
+        md:flex-row
+        "
+        >
           <StudiesCard
             title={tStudies("1.Certificate")}
             institution={tStudies("1.Institution")}

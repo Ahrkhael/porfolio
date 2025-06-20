@@ -20,7 +20,7 @@
       "Job": "Fullstack Developer",
       "Company": "Burst your ideas",
       "Dates": "2024 - Present",
-      "Description": "As a fullstack developer I work on \nFronted with technologies such as React, Next, Javascript, HTML, CSS, Tailwind and Typescript \nBackend with tecnnologies like Ruby on Rails and PostgreSQL\n I create different web pages, fixing errors, creating reusable components \nand creation and use of different APIs, both internals and third parties\nWe use Git as a version control tool, Slack and Trello to organize our work",
+      "Description": "I work on Fronted with technologies such as \nReact, Next, Javascript, HTML, CSS, Tailwind and Typescript \nBackend with tecnnologies like Ruby on Rails and PostgreSQL\n I create different web pages, fixing errors, creating reusable components and creation and use of different APIs, both internals and third parties\nWe use Git as a version control tool, Slack and Trello to organize our work",
       "Link": "https://burstyourideas.com/"
     }
   },
@@ -42,7 +42,7 @@
     }
   },
   "Studies": {
-    "Title": "Formación",
+    "Title": "Education",
     "1": {
       "Certificate": "High Vocational Trainee \n Web Applications Development",
       "Institution": "Ilerna FP",
@@ -65,20 +65,14 @@
   "AboutPage": {
     "AboutMyself": {
       "Title": "Background",
-      "Description": "Since 2021, I have developped different applications"
+      "Description": "Programming since 2021, I have developed several applications, both web and desktop, in different programming languages according to the needs of the moment",
+      "Description2": "In 2022 I started the Higher Vocational Training in Web Application Development, finishing it in 2024, having expanded my knowledge of web development much further in the process and applying this knowledge to my work",
+      "Description3": "When I finished the training cycle, the company where I did my internship decided to keep me because they were very happy with my work during the internship period and, honestly, I couldn't be more grateful for this opportunity",
+      "Description4": "And so we come to today, where I am looking for new challenges to continue growing professionally"
     },
     "Motivation": {
       "Title": "What makes me happy about my job?",
       "Description": "The wish to improve and look back and see how much I had been able to achieve"
-    },
-    "Studies": {
-      "Title": "Studies",
-      "1": {
-        "Certificate": "High Vocational Trainee Web Applications Development",
-        "Institution": "Ilerna FP",
-        "Link": "https://www.ilerna.es/"
-      },
-      "Description": "The wish to dsadsa"
     }
   },
   "NotFoundPage": {
