@@ -13,6 +13,7 @@ type PersonalCardProps = {
   gitHub: string;
   imageUrl: string;
   imageAlt?: string;
+  blurDataURL?: string;
   aspectRatio?: string;
   borderRadius?: "none" | "md" | "lg" | "xl" | "2xl" | "full";
 };
@@ -27,6 +28,7 @@ export default function PersonalCard({
   gitHub,
   imageUrl,
   imageAlt = "",
+  blurDataURL = "",
   aspectRatio = "aspect-[4/3]",
   borderRadius = "xl",
 }: PersonalCardProps) {
@@ -44,11 +46,14 @@ export default function PersonalCard({
 
   return (
     <>
-      <div className={clsx("w-full md:w-1/2 lg:pl-20 md:pl-10")}>
+      <div className={clsx("min-w-0 lg:pl-20 md:pl-10")}>
         <h1 className="text-[2.5rem] font-bold">{name}</h1>
         <h2 className="text-[2.5rem] font-bold mb-2">{surname}</h2>
         <p className="text-[1.75rem] my-2">{job}</p>
-        <p className="my-2">{t("Email") + email}</p>
+        <p className="my-2 flex flex-wrap justify-center md:justify-start gap-x-1">
+          <span>{t("Email")}:</span>
+          <span className="break-all">{email}</span>
+        </p>
         <p className="my-2">{t("Phone") + phone}</p>
         <div
           className="
@@ -104,6 +109,8 @@ export default function PersonalCard({
           src={imageUrl}
           alt={imageAlt}
           fill
+          placeholder={blurDataURL ? "blur" : "empty"}
+          blurDataURL={blurDataURL}
           className={clsx("object-cover", borderRadiusClass)}
           sizes="(max-width: 768px) 60dvw, 300px"
         />

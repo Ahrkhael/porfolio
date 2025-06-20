@@ -6,6 +6,7 @@ type ProjectCardProps = {
   url: string;
   imageUrl: string;
   imageAlt?: string;
+  blurDataURL?: string;
   imagePosition?: "top" | "bottom" | "left" | "right";
   children: React.ReactNode;
 };
@@ -14,6 +15,7 @@ export default function ProjectCard({
   url,
   imageUrl,
   imageAlt = "",
+  blurDataURL = "",
   imagePosition = "right",
   children,
 }: ProjectCardProps) {
@@ -25,7 +27,7 @@ export default function ProjectCard({
       target="blank"
       href={url}
       className={clsx(
-        "flex my-10 align-middle ",
+        "flex align-middle ",
         isVertical ? "flex-col items-center" : "flex-row",
         reverse && (isVertical ? "flex-col-reverse" : "md:flex-row-reverse"),
         "w-full h-full max-w-[500px]"
@@ -36,6 +38,8 @@ export default function ProjectCard({
           src={imageUrl}
           alt={imageAlt}
           fill
+          placeholder={blurDataURL ? "blur" : "empty"}
+          blurDataURL={blurDataURL}
           className="object-cover rounded-md"
         />
       </div>
