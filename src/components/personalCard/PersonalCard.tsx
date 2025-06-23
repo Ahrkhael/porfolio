@@ -42,7 +42,7 @@ export default function PersonalCard({
     full: "rounded-full",
   }[borderRadius];
 
-  const t = useTranslations("PersonalCard");
+  const t = useTranslations("ContactData");
 
   return (
     <>
@@ -51,7 +51,7 @@ export default function PersonalCard({
         <h2 className="text-[2.5rem] font-bold mb-2">{surname}</h2>
         <p className="text-[1.75rem] my-2">{job}</p>
         <p className="my-2 flex flex-wrap justify-center md:justify-start gap-x-1">
-          <span>{t("Email")}:</span>
+          <span>{t("Email")}</span>
           <span className="break-all">{email}</span>
         </p>
         <p className="my-2">{t("Phone") + phone}</p>
@@ -61,7 +61,7 @@ export default function PersonalCard({
           md:flex-row md:justify-start md:gap-4 md:m-0 md:my-4
          "
         >
-          <p>{t("Social")}</p>
+          <p>{t("Social")}: </p>
 
           <div className="flex justify-center gap-4">
             <Link
