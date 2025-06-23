@@ -30,6 +30,8 @@
     --background-navbar-rgb: #1e293b;
     --background-navbar-hover-rgb: #073e62;
 
+    --background-footer-rgb: #1e293b;
+
     --background-card: #1e293b;
     --border-card: #334155;
     --background-card-secondary: #334155;
@@ -45,4 +47,5 @@ body {
   color: var(--font-color-primary);
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
+  cursor: default;
 }

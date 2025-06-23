@@ -9,10 +9,11 @@
     "PersonalJob": "Fullstack developer",
     "PhotoAlt": "Personal Photo"
   },
-  "PersonalCard": {
+  "ContactData": {
+    "Contact": "Contact",
     "Email": "Email: ",
     "Phone": "Phone: ",
-    "Social": "Social media: "
+    "Social": "Social media"
   },
   "Experience": {
     "Title": "Work experience",
