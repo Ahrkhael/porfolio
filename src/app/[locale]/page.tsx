@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { getBlurDataURL } from "@/utils/getBlurDataURL";
+import Link from "next/link";
 import Section from "@/components/section/Section";
 import PersonalCard from "@/components/personalCard/PersonalCard";
 import ExperienceCard from "@/components/experienceCard/ExperienceCard";
@@ -54,24 +55,42 @@ export default async function HomePage() {
 
       <Section title={tProjects("Title")} className="py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 place-items-center gap-10">
-          <ProjectCard
-            url="https://chess-three-alpha.vercel.app/"
-            imageUrl="/images/project-chess.jpg"
-            blurDataURL={blurDataURLChess}
-            imagePosition="top"
+          <Link
+            href="https://chess-three-alpha.vercel.app/"
+            target="blank"
+            className="flex flex-col align-middle items-center w-full h-full max-w-[500px]"
           >
-            <p className="my-2 font-bold text-[24px]">{tProjects("1.Title")}</p>
-            <p>{tProjects("1.ShortDescription")}</p>
-          </ProjectCard>
-          <ProjectCard
-            url="https://traveling-app-steel.vercel.app/"
-            imageUrl="/images/project-traveling-app.jpg"
-            blurDataURL={blurDataURLTravelingApp}
-            imagePosition="top"
+            <ProjectCard
+              imageUrl="/images/project-chess.jpg"
+              imageAlt={tProjects("1.ImageAlt")}
+              imageClassName="max-w-[350px] aspect-square"
+              blurDataURL={blurDataURLChess}
+              textClassName="p-4"
+            >
+              <p className="my-2 font-bold text-[24px]">
+                {tProjects("1.Title")}
+              </p>
+              <p>{tProjects("1.ShortDescription")}</p>
+            </ProjectCard>
+          </Link>
+          <Link
+            href="https://traveling-app-steel.vercel.app/"
+            target="blank"
+            className="flex flex-col align-middle items-center w-full h-full max-w-[500px]"
           >
-            <p className="my-2 font-bold text-[24px]">{tProjects("2.Title")}</p>
-            <p>{tProjects("2.ShortDescription")}</p>
-          </ProjectCard>
+            <ProjectCard
+              imageUrl="/images/project-traveling-app.jpg"
+              imageAlt={tProjects("2.ImageAlt")}
+              imageClassName="max-w-[350px] aspect-square"
+              blurDataURL={blurDataURLTravelingApp}
+              textClassName="p-4"
+            >
+              <p className="my-2 font-bold text-[24px]">
+                {tProjects("2.Title")}
+              </p>
+              <p>{tProjects("2.ShortDescription")}</p>
+            </ProjectCard>
+          </Link>
         </div>
       </Section>
 

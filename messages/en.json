@@ -35,11 +35,23 @@
     "Title": "Projects",
     "1": {
       "Title": "Chess",
-      "ShortDescription": "Classic chess game made for teaching, studying or just playing a game with someone at your side. Programmed from 0 using simply Javascript, HTML and CSS (logic from zero, no external libraries, except for Google Fonts)"
+      "ShortDescription": "Classic chess game made for teaching, studying or just playing a game with someone at your side. Programmed from 0 using simply Javascript, HTML and CSS (logic from zero, no external libraries, except for Google Fonts)",
+      "ProjectDescription1": "A chess game created from scratch with JavaScript, HTML, and CSS. For this project, I decided to manipulate the DOM using JavaScript as my primary strategy and use only HTML and CSS, as the goal was to demonstrate my knowledge of JavaScript and my programming logic.",
+      "ProjectDescription2": "To achieve this, I have used functions, classes, objects, events and, of course, conditionals and loops, to achieve a fully functional chess game.",
+      "ProjectDescription3": "Among its implemented functionalities, the following stand out:",
+      "FunctionsList1": "Check",
+      "FunctionsList2": "Checkmate",
+      "FunctionsList3": "Stalemate",
+      "FunctionsList4": "Forbid illegal movements",
+      "FunctionsList5": "Castle",
+      "FunctionsList6": "En passant",
+      "ImageAlt": "Chess project image"
     },
     "2": {
       "Title": "Traveling-app",
-      "ShortDescription": "Website that offers users different tourist destinations for their next holidays. Made in NextJS 15 and with dependencies on React 19, leaflet, next-intl, nodemailer and lqip, among others."
+      "ShortDescription": "Website that offers users different tourist destinations for their next holidays. Made in NextJS 15 and with dependencies on React 19, leaflet, next-intl, nodemailer and lqip, among others.",
+      "LongDescription": "",
+      "ImageAlt": "Traveling app project image"
     }
   },
   "Studies": {

@@ -6,8 +6,6 @@ export default function Footer() {
   const tContact = useTranslations("ContactData");
 
   // Personal data
-  //const name = process.env.PERSONAL_NAME || "name";
-  //const surname = process.env.PERSONAL_SURNAME || "surname";
   const email = process.env.PERSONAL_EMAIL || "email";
   const phone = process.env.PERSONAL_PHONE || "phone";
   const linkedIn = process.env.PERSONAL_LINKEDIN || "linkedin";
