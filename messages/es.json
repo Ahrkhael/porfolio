@@ -35,11 +35,23 @@
     "Title": "Proyectos",
     "1": {
       "Title": "Ajedrez",
-      "ShortDescription": "Clásico juego de ajedrez perfecto para enseñar, estudiar o sencillamente jugar con alguien a tu lado. Programado desde 0 usando simplemente Javascript, HTML y CSS (lógica desde cero, sin librerías externas, excepto la de Google Fonts)"
+      "ShortDescription": "Clásico juego de ajedrez perfecto para enseñar, estudiar o sencillamente jugar con alguien a tu lado. Programado desde 0 usando simplemente Javascript, HTML y CSS (lógica desde cero, sin librerías externas, excepto la de Google Fonts)",
+      "ProjectDescription1": "Ajedrez creado desde cero con Javascript, HTML y CSS. Para este proyecto decidí manipular el DOM desde Javascript como estrategia principal y apenas usar el HTML y CSS, dado que el objetivo era demostrar mis conocimientos de Javascript y mi lógica de programación",
+      "ProjectDescription2": "Para ello, he hecho uso de funciones, clases, objetos, eventos y, por supuesto, condicionales y bucles, para conseguir un ajedrez completamente funcional",
+      "ProjectDescription3": "Entre sus funcionalidades implementadas, caben destacar:",
+      "FunctionsList1": "Jaque",
+      "FunctionsList2": "Jaque Mate",
+      "FunctionsList3": "Ahogado",
+      "FunctionsList4": "Impedir movimientos ilegales",
+      "FunctionsList5": "Enroque",
+      "FunctionsList6": "Captura al paso",
+      "ImageAlt": "Imagen proyecto ajedrez"
     },
     "2": {
       "Title": "Traveling-app",
-      "ShortDescription": "Web que ofrece a los usuarios diferentes destinos turísticos para su próxima escapada. Hecha en NextJS 15 y con dependencias de React 19, leaflet, next-intl, nodemailer y lqip, entre otras"
+      "ShortDescription": "Web que ofrece a los usuarios diferentes destinos turísticos para su próxima escapada. Hecha en NextJS 15 y con dependencias de React 19, leaflet, next-intl, nodemailer y lqip, entre otras",
+      "LongDescription": "",
+      "ImageAlt": "Imagen proyecto traveling app"
     }
   },
   "Studies": {
