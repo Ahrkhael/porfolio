@@ -50,7 +50,14 @@
     "2": {
       "Title": "Traveling-app",
       "ShortDescription": "Web que ofrece a los usuarios diferentes destinos turísticos para su próxima escapada. Hecha en NextJS 15 y con dependencias de React 19, leaflet, next-intl, nodemailer y lqip, entre otras",
-      "LongDescription": "",
+      "ProjectDescription1": "Página web construida en Nextjs 15 y React 19 aplicando múltiples funcionalidades que ofrecen dichos frameworks, además de apoyarme en algunas librerías externas",
+      "ProjectDescription2": "El proyecto consta de múltiples componentes (tanto de cliente como de servidor), hooks y APIs para mejorar la escalabilidad del proyecto y el rendimiento general de la web",
+      "ProjectDescription3": "También utiliza un pequeño middleware que redirige al usuario en función de sus preferencias de idioma y que, también, evita que un usuario pueda realizar muchas peticiones al servidor (intentando paliar así potenciales problemas por sobrecarga del mismo)",
+      "ProjectDescription4": "Entre las principales dependencias del proyecto tenemos:",
+      "DependencyList1": "Librería utilizada para mostrar las ubicaciones → leaflet",
+      "DependencyList2": "Librería utilizada para la optimización de imágenes → lqip-modern",
+      "DependencyList3": "Librería utilizada para gestionar los idiomas → next-intl",
+      "DependencyList4": "Librería utilizada para contactar al correo electrónico → nodemailer",
       "ImageAlt": "Imagen proyecto traveling app"
     }
   },

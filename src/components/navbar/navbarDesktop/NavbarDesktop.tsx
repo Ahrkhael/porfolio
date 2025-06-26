@@ -29,12 +29,12 @@ const NavbarDesktop: FC = () => {
           {t("Technologies")}
         </Link> */}
 
-        {/* <Link
+        <Link
           href="/projects"
           className="hover:text-(--font-color-menu-secondary)"
         >
           {t("Projects")}
-        </Link> */}
+        </Link>
 
         <LangSelector />
       </div>
