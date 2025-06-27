@@ -23,8 +23,8 @@ export default function FrontendTechnologies() {
         src="/icons/javascript.svg"
         width={50}
         height={50}
-        alt="Javascript logo icon"
-        title="Javascript"
+        alt="JavaScript logo icon"
+        title="JavaScript"
       />
 
       <IconsWithTitle

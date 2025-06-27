@@ -20,7 +20,7 @@ export default function IconsWithTitle({
       <div className="relative flex justify-center items-center">
         <Image src={src} width={width} height={height} alt={alt} />
       </div>
-      <p className="py-2">{title}</p>
+      <p className="text-center py-2">{title}</p>
     </div>
   );
 }
