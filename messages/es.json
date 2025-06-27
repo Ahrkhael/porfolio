@@ -29,7 +29,31 @@
     "Title": "Tecnologías",
     "Front": "Frontend",
     "Back": "Backend",
-    "Other": "Otras tecnologías"
+    "Other": "Otras tecnologías",
+    "Next": {
+      "Description1": "Desde 2024 he trabajado activamente con Next.js desarrollando aplicaciones web modernas y escalables. A lo largo de este tiempo, he creado numerosos componentes personalizados y también he integrado componentes de librerías externas para optimizar la experiencia del usuario y mejorar la productividad del desarrollo",
+      "Description2": "He trabajado en proyectos construidos tanto con JavaScript como con TypeScript, lo que me ha permitido adaptarme fácilmente a distintos entornos técnicos y requerimientos. Asimismo, he utilizado TailwindCSS en varios de estos proyectos para implementar interfaces limpias, responsivas y altamente personalizables, aunque también he trabajado sin este framework, aplicando soluciones CSS más tradicionales según las necesidades del proyecto",
+      "Description3": "Mi experiencia abarca desde la creación de interfaces dinámicas hasta la optimización del rendimiento mediante el uso de características clave de Next.js como rutas dinámicas, renderizado del lado del servidor (SSR), generación estática (SSG) y el manejo de API routes, además de su integración con bases de datos y servicios externos"
+    },
+    "React": {
+      "Description1": "En 2024 empecé a trabajar en el desarrollo de interfaces de usuario y de single page application (SPA) utilizando React, enfocándome en la creación de aplicaciones interactivas y orientadas a componentes. Durante este tiempo, he diseñado y desarrollado componentes personalizados, así como integrado componentes y hooks de librerías externas, lo que me ha permitido construir soluciones modulares, reutilizables y mantenibles",
+      "Description2": "Parte de mi experiencia incluye la implementación e integración de componentes de Material UI (MUI), adaptando sus estilos y comportamientos para alinearlos con los requerimientos visuales y funcionales de cada proyecto. También he trabajado en la integración de funcionalidades específicas como Google reCAPTCHA, asegurando la protección de formularios y la validación segura de usuarios en entornos reales de producción",
+      "Description3": "Mi trabajo con React se ha centrado en un enfoque práctico y eficiente del ciclo de vida de los componentes, el manejo del estado (tanto local como global) y la mejora continua de la experiencia del usuario a través de interacciones fluidas, buenas prácticas y un rendimiento optimizado"
+    },
+    "Javascript": {
+      "Description1": "Comencé a trabajar con JavaScript en 2022 desarrollando pequeños proyectos personales, y desde 2023 he participado en proyectos de mayor envergadura donde he podido profundizar en el lenguaje y aplicar sus características más avanzadas de manera práctica",
+      "Description2": "A lo largo de este tiempo he utilizado eventos, promesas, funciones asíncronas y clases (siguiendo principios de programación orientada a objetos) para construir funcionalidades dinámicas y adaptadas a las necesidades de cada proyecto. He trabajado tanto en el frontend, manipulando el DOM y gestionando la interacción del usuario, como en la lógica más estructurada de aplicaciones web",
+      "Description3": "Mi enfoque con JavaScript ha sido siempre escribir código limpio, reutilizable y bien estructurado, buscando el equilibrio entre la legibilidad y la eficiencia. Esta base sólida en JavaScript ha sido fundamental para mi trabajo posterior con frameworks como React y Next.js"
+    },
+    "HTML": {
+      "Description1": "Desde 2022 he trabajado con HTML como base fundamental en la construcción de estructuras semánticas y accesibles para páginas web. He aplicado buenas prácticas en la organización del contenido, el uso de etiquetas semánticas y la optimización para SEO, manteniendo un enfoque en la claridad del marcado y la accesibilidad",
+      "Description2": "A lo largo de distintos proyectos, he utilizado HTML tanto en su forma más estándar, como en combinación con frameworks y librerías modernas como Bootstrap y TailwindCSS, adaptándome a distintas arquitecturas de frontend según los requerimientos técnicos y de diseño. Esta experiencia me ha permitido crear estructuras coherentes, mantenibles y bien integradas con los estilos y comportamientos definidos en CSS o en componentes de JavaScript/React"
+    },
+    "CSS": {
+      "Description1": "Desde 2022 he desarrollado estilos utilizando CSS tanto en su forma tradicional como apoyándome en frameworks como Bootstrap y TailwindCSS, según la complejidad y necesidades visuales de cada proyecto",
+      "Description2": "Mi experiencia incluye la creación de interfaces responsivas, el uso de flexbox, grid, animaciones, pseudo-clases y personalización detallada del diseño. He trabajado en la adaptación de estilos a distintos dispositivos y resoluciones, así como en la implementación de sistemas de diseño reutilizables y escalables",
+      "Description3": "Además de escribir CSS puro, he integrado estilos en entornos con herramientas modernas como CSS Modules y el enfoque utility-first de Tailwind, permitiéndome mantener un flujo de trabajo eficiente y coherente con los principios del diseño moderno"
+    }
   },
   "Projects": {
     "Title": "Proyectos",
@@ -89,27 +113,6 @@
       "Description2": "En 2022 empecé el FP Superior de Desarrollo de Aplicaciones Web, terminándolo en 2024 habiendo expandido en el proceso mucho más mis conocimientos sobre el desarrollo web y aplicando dichos conocimientos a mi trabajo",
       "Description3": "Cuando terminé el ciclo formativo, la empresa donde realicé mis prácticas decidió retenerme dado que estuvieron muy contentos con mi labor desempeñada durante el periodo de prácticas y, la verdad, es que no les puedo estar más agradecido por dicha oportunidad",
       "Description4": "Y así llegamos al día de hoy, donde estoy buscando nuevos retos para poder seguir creciendo profesionalmente"
-    },
-    "Studies": {
-      "Title": "Formación",
-      "1": {
-        "Certificate": "FP Superior DAW \n Desarrollo Aplicaciones Web",
-        "Institution": "Ilerna FP",
-        "Dates": "Septiembre 2022 - Junio 2024",
-        "Link": "https://www.ilerna.es/"
-      },
-      "2": {
-        "Certificate": "First Certificate in English \nB2 Level",
-        "Institution": "Cambridge",
-        "Dates": "Julio 2019",
-        "Link": "https://www.cambridgeenglish.org/es/exams-and-tests/first/"
-      },
-      "3": {
-        "Certificate": "Grado Ingeniería Química",
-        "Institution": "Universidad de Cádiz",
-        "Dates": "Septiembre 2013 - Junio 2019",
-        "Link": "https://www.uca.es/"
-      }
     }
   },
   "NotFoundPage": {

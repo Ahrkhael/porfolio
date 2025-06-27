@@ -21,13 +21,13 @@ const NavbarDesktop: FC = () => {
         </Link>
 
         {/* In Progress */}
-        {/*         
+
         <Link
           href="/technologies"
           className="hover:text-(--font-color-menu-secondary)"
         >
           {t("Technologies")}
-        </Link> */}
+        </Link>
 
         <Link
           href="/projects"
