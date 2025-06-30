@@ -29,7 +29,31 @@
     "Title": "Technologies",
     "Front": "Frontend",
     "Back": "Backend",
-    "Other": "Other technologies"
+    "Other": "Other technologies",
+    "Next": {
+      "Description1": "Since 2024, I've been actively working with Next.js, developing modern and scalable web applications. During this time, I've created numerous custom components and integrated components from external libraries to optimize the user experience and improve development productivity",
+      "Description2": "I've worked on projects built with both JavaScript and TypeScript, which has allowed me to easily adapt to different technical environments and requirements. I've also used TailwindCSS in several of these projects to implement clean, responsive, and highly customizable interfaces, although I've also worked without this framework, applying more traditional CSS solutions according to the project's needs",
+      "Description3": "My experience ranges from creating dynamic interfaces to optimizing performance by using key Next.js features such as dynamic routes, server-side rendering (SSR), static generation (SSG), and handling API routes, as well as integrating them with external databases and services"
+    },
+    "React": {
+      "Description1": "In 2024, I started working on user interface and single-page application (SPA) development using React, focusing on creating interactive, component-oriented applications. During this time, I have designed and developed custom components, as well as integrated components and hooks from external libraries, which has allowed me to build modular, reusable, and maintainable solutions",
+      "Description2": "Part of my experience includes the implementation and integration of Material UI (MUI) components, adapting their styles and behaviors to align with the visual and functional requirements of each project. I have also worked on the integration of specific features such as Google reCAPTCHA, ensuring form protection and secure user validation in real-world production environments",
+      "Description3": "My work with React has focused on a practical and efficient approach to the component lifecycle, state management (both local and global), and continuous improvement of the user experience through fluid interactions, best practices, and optimized performance"
+    },
+    "Javascript": {
+      "Description1": "I started working with JavaScript in 2022 developing small personal projects, and since 2023 I have participated in larger projects where I have been able to delve deeper into the language and apply its most advanced features in a practical way",
+      "Description2": "Throughout this time, I've used events, promises, asynchronous functions, and classes (following object-oriented programming principles) to build dynamic functionalities tailored to the needs of each project. I've worked both on the frontend, manipulating the DOM and managing user interaction, and on the more structured logic of web applications",
+      "Description3": "My approach to JavaScript has always been to write clean, reusable, and well-structured code, seeking a balance between readability and efficiency. This solid foundation in JavaScript has been fundamental to my subsequent work with frameworks like React and Next.js"
+    },
+    "HTML": {
+      "Description1": "Since 2022, I've been working with HTML as a fundamental foundation for building semantic and accessible web page structures. I've applied best practices in content organization, the use of semantic tags, and SEO optimization, while maintaining a focus on markup clarity and accessibility",
+      "Description2": "Throughout various projects, I've used HTML both in its most standard form and in combination with modern frameworks and libraries such as Bootstrap and TailwindCSS, adapting to different front-end architectures based on technical and design requirements. This experience has allowed me to create coherent, maintainable, and well-integrated structures with styles and behaviors defined in CSS or JavaScript/React components"
+    },
+    "CSS": {
+      "Description1": "Since 2022 I have developed styles using CSS both in its traditional form and relying on frameworks such as Bootstrap and TailwindCSS, depending on the complexity and visual needs of each project",
+      "Description2": "My experience includes creating responsive interfaces, using flexbox, grid, animations, pseudo-classes, and detailed design customization. I've worked on adapting styles to different devices and resolutions, as well as implementing reusable and scalable design systems",
+      "Description3": "In addition to writing pure CSS, I've integrated styles into environments with modern tools like CSS Modules and Tailwind's utility-first approach, allowing me to maintain an efficient workflow consistent with modern design principles"
+    }
   },
   "Projects": {
     "Title": "Projects",
