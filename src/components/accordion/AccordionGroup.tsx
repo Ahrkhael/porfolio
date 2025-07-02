@@ -31,11 +31,11 @@ export default function AccordionGroup({ data }: { data: AccordionData[] }) {
           title={section.title}
           isOpen={openIndex === index}
           onToggle={() => handleToggle(index)}
-          className="grid grid-cols-6 place-items-center gap-x-10 gap-y-20"
+          className="flex flex-col md:grid md:grid-cols-6 place-items-center gap-x-10 gap-y-20"
         >
           {section.items.map((tech, idx) => (
             <div className="contents" key={idx}>
-              <div className="col-span-1">
+              <div className="md:col-span-1">
                 <IconsWithTitle
                   src={tech.iconSrc}
                   width={50}
@@ -44,7 +44,7 @@ export default function AccordionGroup({ data }: { data: AccordionData[] }) {
                   title={tech.title}
                 />
               </div>
-              <div className="col-span-5 w-full h-full text-justify">
+              <div className="md:col-span-5 w-full h-full text-justify border border-[var(--border-card)]">
                 {tech.descriptions.map((desc, dIdx) => (
                   <p key={dIdx} className="text-[20px] my-2 px-6 md:pr-20">
                     {desc}

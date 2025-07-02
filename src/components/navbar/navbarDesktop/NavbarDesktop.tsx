@@ -20,8 +20,6 @@ const NavbarDesktop: FC = () => {
           {t("About")}
         </Link>
 
-        {/* In Progress */}
-
         <Link
           href="/technologies"
           className="hover:text-(--font-color-menu-secondary)"
