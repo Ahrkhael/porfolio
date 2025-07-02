@@ -53,6 +53,40 @@
       "Description1": "Since 2022 I have developed styles using CSS both in its traditional form and relying on frameworks such as Bootstrap and TailwindCSS, depending on the complexity and visual needs of each project",
       "Description2": "My experience includes creating responsive interfaces, using flexbox, grid, animations, pseudo-classes, and detailed design customization. I've worked on adapting styles to different devices and resolutions, as well as implementing reusable and scalable design systems",
       "Description3": "In addition to writing pure CSS, I've integrated styles into environments with modern tools like CSS Modules and Tailwind's utility-first approach, allowing me to maintain an efficient workflow consistent with modern design principles"
+    },
+    "Ruby": {
+      "Description1": "My experience with Ruby has been developed mainly in the context of Ruby on Rails, a framework with which I have worked since 2024 in the construction of robust web applications, organized under the MVC (Model-View-Controller) pattern",
+      "Description2": "I have developed and maintained functionalities both on the server side and in relational database management (especially with PostgreSQL), working with migrations, validations, associations between models and the creation of controllers and views that effectively respond to the needs of the frontend",
+      "Description3": "I've also worked on route configuration, data serialization, and RESTful API development, facilitating integration with frontends developed in Next.js and React. My approach is based on writing clean code and following the framework's conventions, leveraging the productivity and clarity that Ruby and Rails offer for agile application development"
+    },
+    "PHP": {
+      "Description1": "My experience with PHP began in 2023, developing server-side applications focused on dynamic web content generation and database interaction. During this time, I've gained experience writing efficient and structured scripts, applying good object-oriented programming practices, and separating business logic from presentation",
+      "Description2": "My most significant experience with PHP was developing my final vocational training project, in which I designed and implemented a complete web application using PHP as the backend and JavaScript as the frontend, communicating both sides via HTTP requests. This project included user management, CRUD operations, validations, and database integration using MySQL",
+      "Description3": "Throughout the process, I worked with forms, sessions, error handling, and basic security, which allowed me to consolidate my knowledge of the language and gain a practical understanding of its application in real development environments"
+    },
+    "Java": {
+      "Description1": "I started learning Java in 2021, gaining a solid foundation in the language's syntax, object-oriented programming, and the fundamentals of computational logic. However, it wasn't until 2023 that I began working on more comprehensive and structured projects, applying my knowledge in practical contexts and with defined objectives",
+      "Description2": "I have developed object-oriented applications using classes, inheritance, encapsulation, interfaces, and complex control structures. I have also worked on file management, the use of collections, and exception handling, focusing on writing clean, modular, and maintainable code"
+    },
+    "PostgreSQL": {
+      "Description1": "I have worked with PostgreSQL as a relational database management system in almost all projects developed with Ruby on Rails, taking advantage of its robustness, performance and compatibility with demanding production environments",
+      "Description2": "My experience includes creating and managing migrations, defining relational schemas, using associations between models, implementing custom SQL queries, and optimizing data access from the model layer"
+    },
+    "MySQL": {
+      "Description1": "I have used MySQL in projects developed with Java and PHP, mainly taking advantage of MySQL Workbench and PHPMyAdmin as a graphical environment for managing databases, schemas and queries",
+      "Description2": "My experience ranges from relational table design and primary/foreign key management to complex SQL query execution and CRUD operations integrated into applications"
+    },
+    "Csharp": {
+      "Description1": "My experience with C# was key in my training as a developer, since it was the language with which I learned the fundamentals of functional programming in 2022 and developed a deeper understanding of concepts such as variable scopes, execution flows and recursion, among others",
+      "Description2": "During this period, I worked primarily on creating console applications, developing projects that allowed me to apply both functional logic and more complex algorithmic structures. Among my notable projects were an implementation of Conway's Game of Life and a functional version of the classic Minesweeper, in which I addressed topics such as matrix manipulation and execution flow control"
+    },
+    "Python": {
+      "Description1": "Since 2023, I have a solid foundation in Python, acquired through courses, personal projects, and practical exercises focused on understanding its clear syntax and multi-paradigm approach. Although I don't consider it the language I have the greatest depth in, I feel comfortable working with data structures, functions, flow control, and Python modules",
+      "Description2": "My experience includes algorithmic problem-solving, task automation, and exploring tools within the Python ecosystem. This foundation allows me to tackle functional scripts and easily understand third-party Python code when it's necessary to integrate it into a project or understand its logic"
+    },
+    "Git": {
+      "Description1": "Since 2023, I have been working continuously with Git as my primary version control tool, both on personal and collaborative projects. During this time, I have gained extensive experience managing branches, creating pull requests, resolving conflicts, and maintaining a clean and understandable change history",
+      "Description2": "Additionally, I have worked with platforms such as GitHub, taking advantage of its code review tools, issue tracking and task automation through GitHub Actions when necessary"
     }
   },
   "Projects": {

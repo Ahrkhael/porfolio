@@ -53,6 +53,40 @@
       "Description1": "Desde 2022 he desarrollado estilos utilizando CSS tanto en su forma tradicional como apoyándome en frameworks como Bootstrap y TailwindCSS, según la complejidad y necesidades visuales de cada proyecto",
       "Description2": "Mi experiencia incluye la creación de interfaces responsivas, el uso de flexbox, grid, animaciones, pseudo-clases y personalización detallada del diseño. He trabajado en la adaptación de estilos a distintos dispositivos y resoluciones, así como en la implementación de sistemas de diseño reutilizables y escalables",
       "Description3": "Además de escribir CSS puro, he integrado estilos en entornos con herramientas modernas como CSS Modules y el enfoque utility-first de Tailwind, permitiéndome mantener un flujo de trabajo eficiente y coherente con los principios del diseño moderno"
+    },
+    "Ruby": {
+      "Description1": "Mi experiencia con Ruby se ha desarrollado principalmente en el contexto de Ruby on Rails, framework con el que he trabajado desde 2024 en la construcción de aplicaciones web robustas, organizadas bajo el patrón MVC (Modelo-Vista-Controlador)",
+      "Description2": "He desarrollado y mantenido funcionalidades tanto del lado del servidor como en la gestión de bases de datos relacionales (especialmente con PostgreSQL), trabajando con migraciones, validaciones, asociaciones entre modelos y la creación de controladores y vistas que respondan de forma eficaz a las necesidades del frontend",
+      "Description3": "También he trabajado en la configuración de rutas, la serialización de datos y la creación de API RESTful, facilitando la integración con frontends desarrollados en Next.js y React. Mi enfoque se basa en escribir código limpio y seguir las convenciones del framework, aprovechando la productividad y claridad que Ruby y Rails ofrecen para el desarrollo ágil de aplicaciones"
+    },
+    "PHP": {
+      "Description1": "Mi experiencia con PHP se remonta a 2023, desarrollando aplicaciones del lado del servidor orientadas a la generación dinámica de contenido web y la interacción con bases de datos. Durante este tiempo, he adquirido experiencia en la escritura de scripts eficientes y estructurados, aplicando buenas prácticas de programación orientada a objetos y separando la lógica del negocio de la presentación",
+      "Description2": "Mi experiencia más significativa con PHP fue el desarrollo de mi proyecto final de FP, en el que diseñé e implementé una aplicación web completa, utilizando PHP como backend y JavaScript como frontend y comunicando ambas partes mediante peticiones HTTP. Este proyecto incluyó la gestión de usuarios, operaciones CRUD, validaciones, y la integración con bases de datos mediante MySQL",
+      "Description3": "A lo largo del proceso, trabajé con formularios, sesiones, control de errores y seguridad básica, lo que me permitió consolidar mis conocimientos del lenguaje y adquirir una visión práctica de su aplicación en entornos reales de desarrollo"
+    },
+    "Java": {
+      "Description1": "Comencé a aprender Java en 2021, adquiriendo una base sólida en la sintaxis del lenguaje, la programación orientada a objetos y los fundamentos de la lógica computacional. Sin embargo, fue a partir de 2023 cuando empecé a trabajar en proyectos más completos y estructurados, aplicando mis conocimientos en contextos prácticos y con objetivos definidos",
+      "Description2": "He desarrollado aplicaciones orientadas a objetos, utilizando clases, herencia, encapsulamiento, interfaces y estructuras de control complejas. Además, he trabajado en la gestión de archivos, el uso de colecciones y el manejo de excepciones, enfocándome en escribir código limpio, modular y mantenible"
+    },
+    "PostgreSQL": {
+      "Description1": "He trabajado con PostgreSQL como sistema de gestión de bases de datos relacional en casi todos los proyectos desarrollados con Ruby on Rails, aprovechando su robustez, rendimiento y compatibilidad con entornos de producción exigentes",
+      "Description2": "Mi experiencia incluye la creación y gestión de migraciones, definición de esquemas relacionales, uso de asociaciones entre modelos, implementación de consultas SQL personalizadas y optimización del acceso a los datos desde la capa del modelo"
+    },
+    "MySQL": {
+      "Description1": "He utilizado MySQL en proyectos desarrollados con Java y PHP, aprovechando principalmente MySQL Workbench y PHPMyAdmin como entorno gráfico para la gestión de bases de datos, esquemas y consultas",
+      "Description2": "Mi experiencia abarca desde el diseño de tablas relacionales y el manejo de claves primarias/foráneas, hasta la ejecución de consultas SQL complejas y operaciones CRUD integradas en las aplicaciones"
+    },
+    "Csharp": {
+      "Description1": "Mi experiencia con C# fue clave en mi formación como desarrollador, ya que fue el lenguaje con el que aprendí en 2022 los fundamentos de la programación funcional y desarrollé una comprensión más profunda de conceptos como ámbitos de las variables, flujos de ejecución y recursividad, entre otros",
+      "Description2": "Durante esta etapa, trabajé principalmente en la creación de aplicaciones de consola, desarrollando proyectos que me permitieron aplicar tanto la lógica funcional como estructuras algorítmicas más complejas. Entre los proyectos que destaqué se encuentran una implementación del Juego de la Vida de Conway y una versión funcional del clásico Buscaminas, en los que abordé temas como la manipulación de matrices y control del flujo de ejecución"
+    },
+    "Python": {
+      "Description1": "Desde 2023 cuento con una base sólida en Python, adquirida a través de cursos, proyectos personales y ejercicios prácticos enfocados en la comprensión de su sintaxis clara y su enfoque multiparadigma. Aunque considero que no es el lenguaje en el que tengo mayor profundidad, me siento cómodo trabajando con estructuras de datos, funciones, control de flujo y módulos propios de Python",
+      "Description2": "Mi experiencia incluye la resolución de problemas algorítmicos, automatización de tareas y la exploración de herramientas del ecosistema Python. Esta base me permite abordar scripts funcionales y comprender con facilidad código Python de terceros cuando es necesario integrarlo en un proyecto o entender su lógica"
+    },
+    "Git": {
+      "Description1": "Desde 2023 he trabajado de forma continua con Git como herramienta principal de control de versiones, tanto en proyectos personales como colaborativos. Durante este tiempo, he adquirido una buena práctica en la gestión de ramas, la creación de pull requests, la resolución de conflictos y el mantenimiento de un historial de cambios limpio y comprensible",
+      "Description2": "Además, he trabajado con plataformas como GitHub, aprovechando sus herramientas de revisión de código, seguimiento de issues y automatización de tareas mediante GitHub Actions cuando ha sido necesario"
     }
   },
   "Projects": {
