@@ -7,7 +7,7 @@ const NavbarDesktop: FC = () => {
   const t = useTranslations("Navbar");
 
   return (
-    <nav className="w-full h-full">
+    <nav className="w-full h-full relative">
       <div className="h-full flex gap-x-20 justify-center items-center">
         <Link href="/" className="hover:text-(--font-color-menu-secondary)">
           {t("Home")}
