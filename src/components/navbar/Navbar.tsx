@@ -18,7 +18,7 @@ const Navbar: FC = () => {
       </div>
 
       {/* Mobile: oculto en pantallas ≥ md */}
-      <div className="flex md:hidden">
+      <div className="flex w-full h-full md:hidden">
         <NavbarMobile />
       </div>
     </header>
