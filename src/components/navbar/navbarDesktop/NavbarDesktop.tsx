@@ -2,13 +2,14 @@ import React, { FC } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import LangSelector from "@/components/langSelector/LangSelector";
+import DownloadFile from "@/components/downloadFile/DownloadFile";
 
 const NavbarDesktop: FC = () => {
   const t = useTranslations("Navbar");
 
   return (
     <nav className="w-full h-full relative">
-      <div className="h-full flex gap-x-20 justify-center items-center">
+      <div className="h-full flex gap-x-[5dvw] justify-center items-center">
         <Link href="/" className="hover:text-(--font-color-menu-secondary)">
           {t("Home")}
         </Link>
@@ -33,6 +34,8 @@ const NavbarDesktop: FC = () => {
         >
           {t("Projects")}
         </Link>
+
+        <DownloadFile title={t("DownloadCV")} />
 
         <LangSelector />
       </div>
