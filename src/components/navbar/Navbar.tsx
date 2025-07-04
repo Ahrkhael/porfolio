@@ -7,7 +7,7 @@ const Navbar: FC = () => {
   return (
     <header
       className="
-        fixed top-0 left-0 w-full h-[7dvh] z-10 flex justify-center items-center
+        fixed top-0 left-0 w-full min-h-[7dvh] z-10 flex justify-center items-center
         bg-(--background-navbar-rgb) shadow-md
       "
       style={{ minHeight: "var(--navbar-min-height)" }}
