@@ -58,7 +58,7 @@ const ToggleMenu = ({ children }: ToggleMenuProps) => {
 
       <div
         ref={menuRef}
-        className={`absolute top-full left-1/2 -translate-x-1/2 w-[100dvw] h-[100dvh] bg-(--background-navbar-rgb) shadow-md z-50 flex flex-col text-center items-center transition-opacity duration-200
+        className={`absolute top-full left-0 w-[100dvw] h-[100dvh] bg-(--background-navbar-rgb) shadow-md z-50 flex flex-col text-center items-center transition-opacity duration-200
             ${isOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}
       >
         {React.Children.map(children, (child) => {
