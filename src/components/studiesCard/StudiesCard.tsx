@@ -19,7 +19,10 @@ export default function StudiesCard({
       <p className="text-center my-2 whitespace-pre-line">{institution}</p>
       {dates && <p className="text-center my-2">{dates}</p>}
       {link && (
-        <a href={link} className="text-blue-500 underline text-center my-2">
+        <a
+          href={link}
+          className="text-blue-500 underline text-center break-all md:break-normal my-2"
+        >
           {link}
         </a>
       )}

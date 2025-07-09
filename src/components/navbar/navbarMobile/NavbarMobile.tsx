@@ -3,16 +3,19 @@ import ToggleMenu from "./ToggleMenu";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import LangSelector from "@/components/langSelector/LangSelector";
+import DownloadFile from "@/components/downloadFile/DownloadFile";
 
 const NavbarMobile: FC = () => {
   const t = useTranslations("Navbar");
 
   return (
     <nav className="w-full relative flex items-center justify-between z-20">
-      {/* Espacio izquierdo para balancear el LangSelector */}
-      <div className="w-19" />
+      {/* Download CV to the left */}
+      <div className="ml-4">
+        <DownloadFile title={t("DownloadCV")} />
+      </div>
 
-      {/* Menú centrado */}
+      {/* Menu centered */}
       <div className="h-full flex flex-1 justify-center items-center">
         <ToggleMenu>
           <Link href="/" className="w-full py-2">
@@ -30,7 +33,7 @@ const NavbarMobile: FC = () => {
         </ToggleMenu>
       </div>
 
-      {/* LangSelector a la derecha */}
+      {/* LangSelector to the right */}
       <LangSelector />
     </nav>
   );

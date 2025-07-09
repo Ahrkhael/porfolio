@@ -152,5 +152,9 @@
   },
   "NotFoundPage": {
     "Description": "404 | Página no encontrada"
+  },
+  "Metadata": {
+    "title": "Porfolio de Juan Jose Saborido Barranco",
+    "description": "Bienvenido al porfolio de un desarrollador fullstack."
   }
 }
