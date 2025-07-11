@@ -152,5 +152,15 @@
   },
   "NotFoundPage": {
     "Description": "404 | Página no encontrada"
+  },
+  "Metadata": {
+    "Title": "Porfolio de Juan Jose Saborido Barranco",
+    "Description": "Bienvenido al porfolio personal de Juan José Saborido Barranco, desarrollador web fullstack.",
+    "AboutTitle": "Sobre mí",
+    "AboutDescription": "Página donde podrás conocer en más detalle acerca de mi background personal y profesional.",
+    "ProjectsTitle": "Proyectos",
+    "ProjectsDescription": "Página donde podrás conocer en más detalle acerca de mis proyectos realizados.",
+    "TechnologiesTitle": "Tecnologías",
+    "TechnologiesDescription": "Página donde podrás conocer en más detalle acerca de las tecnologías con las que he trabajado y en qué momentos y condiciones lo he hecho."
   }
 }

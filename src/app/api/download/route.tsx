@@ -5,7 +5,7 @@ import fs from "fs";
 // IP map -> timestamps[]
 const downloadAttempts = new Map<string, number[]>();
 
-const MAX_REQUESTS = 3;
+const MAX_REQUESTS = 2;
 const WINDOW_MS = 60 * 10000; // 10 minutes
 
 export async function GET(req: NextRequest) {

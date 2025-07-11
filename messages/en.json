@@ -152,5 +152,15 @@
   },
   "NotFoundPage": {
     "Description": "404 | Page not found"
+  },
+  "Metadata": {
+    "Title": "Juan Jose Saborido Barranco Portfolio",
+    "Description": "Welcome to the portfolio of a fullstack developer",
+    "AboutTitle": "About",
+    "AboutDescription": "Page where you can learn more about my personal and professional background.",
+    "ProjectsTitle": "Projects",
+    "ProjectsDescription": "Page where you can learn more about my completed projects.",
+    "TechnologiesTitle": "Technologies",
+    "TechnologiesDescription": "Page where you can learn more about the technologies I have worked with and at what times and under what conditions I have done so."
   }
 }

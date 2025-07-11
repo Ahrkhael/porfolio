@@ -2,6 +2,39 @@ import { useTranslations } from "next-intl";
 import StudiesCard from "@/components/studiesCard/StudiesCard";
 import ExperienceCard from "@/components/experienceCard/ExperienceCard";
 import Section from "@/components/section/Section";
+import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const locale = (await params).locale;
+
+  const t = await getTranslations({
+    locale: locale,
+    namespace: "Metadata",
+  });
+
+  return {
+    title: t("AboutTitle"),
+    description: t("AboutDescription"),
+    alternates: {
+      canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/about`,
+      languages: {
+        en: `${process.env.NEXT_PUBLIC_BASE_URL}/en/about`,
+        es: `${process.env.NEXT_PUBLIC_BASE_URL}/es/about`,
+      },
+    },
+    openGraph: {
+      title: t("AboutTitle"),
+      description: t("AboutDescription"),
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/about`,
+      type: "website",
+    },
+  };
+}
 
 export default function AboutPage() {
   const t = useTranslations("AboutPage");
