@@ -25,9 +25,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  const { locale } = await params;
+  const locale = (await params).locale;
 
   const t = await getTranslations({
     locale: locale,
@@ -35,19 +35,22 @@ export async function generateMetadata({
   });
 
   return {
-    title: t("title"),
-    description: t("description"),
+    title: {
+      template: `%s | ${t("Title")}`,
+      default: t("Title"),
+    },
+    description: t("Description"),
     alternates: {
-      canonical: `https://porfolio-beryl-iota.vercel.app/${locale}`,
+      canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}`,
       languages: {
-        en: "https://porfolio-beryl-iota.vercel.app/en",
-        es: "https://porfolio-beryl-iota.vercel.app/es",
+        en: `${process.env.NEXT_PUBLIC_BASE_URL}/en`,
+        es: `${process.env.NEXT_PUBLIC_BASE_URL}/es`,
       },
     },
     openGraph: {
-      title: t("title"),
-      description: t("description"),
-      url: `https://porfolio-beryl-iota.vercel.app/${locale}`,
+      title: t("Title"),
+      description: t("Description"),
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}`,
       type: "website",
     },
   };
@@ -61,7 +64,7 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }) {
   // Ensure that the incoming `locale` is valid
-  const { locale } = await params;
+  const locale = (await params).locale;
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
