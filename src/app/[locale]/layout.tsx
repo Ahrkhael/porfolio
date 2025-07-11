@@ -63,6 +63,9 @@ export default async function LocaleLayout({
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }) {
+  // Google Site Verification Key
+  const googleMetadata = process.env.GOOGLE_METADATA_KEY;
+
   // Ensure that the incoming `locale` is valid
   const locale = (await params).locale;
   if (!hasLocale(routing.locales, locale)) {
@@ -71,6 +74,9 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
+      <head>
+        <meta name="google-site-verification" content={googleMetadata} />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
