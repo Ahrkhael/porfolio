@@ -3,6 +3,38 @@ import ProjectCard from "@/components/projectCard/ProjectCard";
 import { getTranslations } from "next-intl/server";
 import { getBlurDataURL } from "@/utils/getBlurDataURL";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const locale = (await params).locale;
+
+  const t = await getTranslations({
+    locale: locale,
+    namespace: "Metadata",
+  });
+
+  return {
+    title: t("ProjectsTitle"),
+    description: t("ProjectsDescription"),
+    alternates: {
+      canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/projects`,
+      languages: {
+        en: `${process.env.NEXT_PUBLIC_BASE_URL}/en/projects`,
+        es: `${process.env.NEXT_PUBLIC_BASE_URL}/es/projects`,
+      },
+    },
+    openGraph: {
+      title: t("ProjectsTitle"),
+      description: t("ProjectsDescription"),
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/projects`,
+      type: "website",
+    },
+  };
+}
 
 export default async function ProjectsPage() {
   const t = await getTranslations("Projects");

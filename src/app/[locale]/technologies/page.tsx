@@ -1,5 +1,38 @@
 import AccordionGroup from "@/components/accordion/AccordionGroup";
 import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const locale = (await params).locale;
+
+  const t = await getTranslations({
+    locale: locale,
+    namespace: "Metadata",
+  });
+
+  return {
+    title: t("TechnologiesTitle"),
+    description: t("TechnologiesDescription"),
+    alternates: {
+      canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/technologies`,
+      languages: {
+        en: `${process.env.NEXT_PUBLIC_BASE_URL}/en/technologies`,
+        es: `${process.env.NEXT_PUBLIC_BASE_URL}/es/technologies`,
+      },
+    },
+    openGraph: {
+      title: t("TechnologiesTitle"),
+      description: t("TechnologiesDescription"),
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/technologies`,
+      type: "website",
+    },
+  };
+}
 
 export default function TechnologiesPage() {
   const t = useTranslations("Technologies");
