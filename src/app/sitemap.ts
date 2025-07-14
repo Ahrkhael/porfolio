@@ -4,6 +4,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
+      lastModified: new Date(),
       alternates: {
         languages: {
           en: `${process.env.NEXT_PUBLIC_BASE_URL}/en`,
@@ -13,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${process.env.NEXT_PUBLIC_BASE_URL}/about`,
+      lastModified: new Date(),
       alternates: {
         languages: {
           en: `${process.env.NEXT_PUBLIC_BASE_URL}/en/about`,
@@ -22,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${process.env.NEXT_PUBLIC_BASE_URL}/technologies`,
+      lastModified: new Date(),
       alternates: {
         languages: {
           en: `${process.env.NEXT_PUBLIC_BASE_URL}/en/technologies`,
@@ -31,6 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${process.env.NEXT_PUBLIC_BASE_URL}/projects`,
+      lastModified: new Date(),
       alternates: {
         languages: {
           en: `${process.env.NEXT_PUBLIC_BASE_URL}/en/projects`,
