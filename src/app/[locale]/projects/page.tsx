@@ -5,6 +5,10 @@ import { getBlurDataURL } from "@/utils/getBlurDataURL";
 import Link from "next/link";
 import { Metadata } from "next";
 
+export async function generateStaticParams() {
+  return ["en", "es"].map((locale) => ({ locale }));
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -31,6 +35,17 @@ export async function generateMetadata({
       title: t("ProjectsTitle"),
       description: t("ProjectsDescription"),
       url: `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/projects`,
+      siteName: t("Title"),
+      images: [
+        {
+          url: `${process.env.NEXT_PUBLIC_BASE_URL}/images/preview-image.png`,
+          width: 796,
+          height: 367,
+          alt: `${process.env.PERSONAL_NAME} ${process.env.PERSONAL_SURNAME} Projects`,
+        },
+      ],
+      locale: "en",
+      alternateLocale: "es",
       type: "website",
     },
   };

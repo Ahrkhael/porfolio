@@ -51,6 +51,17 @@ export async function generateMetadata({
       title: t("Title"),
       description: t("Description"),
       url: `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}`,
+      siteName: t("Title"),
+      images: [
+        {
+          url: `${process.env.NEXT_PUBLIC_BASE_URL}/images/preview-image.png`,
+          width: 796,
+          height: 367,
+          alt: `${process.env.PERSONAL_NAME} ${process.env.PERSONAL_SURNAME} Porfolio`,
+        },
+      ],
+      locale: "en",
+      alternateLocale: "es",
       type: "website",
     },
   };
