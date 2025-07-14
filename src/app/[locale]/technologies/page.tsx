@@ -3,6 +3,10 @@ import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { Metadata } from "next";
 
+export async function generateStaticParams() {
+  return ["en", "es"].map((locale) => ({ locale }));
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -29,6 +33,17 @@ export async function generateMetadata({
       title: t("TechnologiesTitle"),
       description: t("TechnologiesDescription"),
       url: `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/technologies`,
+      siteName: t("Title"),
+      images: [
+        {
+          url: `${process.env.NEXT_PUBLIC_BASE_URL}/images/preview-image.png`,
+          width: 796,
+          height: 367,
+          alt: `${process.env.PERSONAL_NAME} ${process.env.PERSONAL_SURNAME} Technologies`,
+        },
+      ],
+      locale: "en",
+      alternateLocale: "es",
       type: "website",
     },
   };

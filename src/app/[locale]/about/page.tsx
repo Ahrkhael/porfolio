@@ -5,6 +5,10 @@ import Section from "@/components/section/Section";
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
+export async function generateStaticParams() {
+  return ["en", "es"].map((locale) => ({ locale }));
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -31,6 +35,17 @@ export async function generateMetadata({
       title: t("AboutTitle"),
       description: t("AboutDescription"),
       url: `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/about`,
+      siteName: t("Title"),
+      images: [
+        {
+          url: `${process.env.NEXT_PUBLIC_BASE_URL}/images/preview-image.png`,
+          width: 796,
+          height: 367,
+          alt: `${process.env.PERSONAL_NAME} ${process.env.PERSONAL_SURNAME} About`,
+        },
+      ],
+      locale: "en",
+      alternateLocale: "es",
       type: "website",
     },
   };
