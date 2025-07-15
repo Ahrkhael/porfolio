@@ -11,9 +11,7 @@ const NavbarMobile: FC = () => {
   return (
     <nav className="w-full relative flex items-center justify-between z-20">
       {/* Download CV to the left */}
-      <div className="ml-4">
-        <DownloadFile title={t("DownloadCV")} />
-      </div>
+      <DownloadFile title={t("DownloadCV")} />
 
       {/* Menu centered */}
       <div className="h-full flex flex-1 justify-center items-center">
