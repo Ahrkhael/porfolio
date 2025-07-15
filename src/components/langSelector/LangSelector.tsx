@@ -31,9 +31,9 @@ const LangSelector = () => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onClick={handleToggleDropdown}
-      className="relative h-full inline-block mr-4 md:cursor-pointer"
+      className="relative h-full inline-block mr-4 p-4 md:p-3 md:cursor-pointer"
     >
-      <p className="md:text-[1.2rem] p-4 md:p-3">🌍</p>
+      <p className="text-[24px]">🌍</p>
 
       <div
         className={`flex flex-col absolute -right-2 md:-right-4 top-full w-20 bg-(--background-navbar-rgb) rounded shadow transition-opacity duration-200
