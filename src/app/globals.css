@@ -10,7 +10,15 @@
   --background-navbar-rgb: #f3f4f6;
   --background-navbar-hover-rgb: #4b5563;
 
-  --dropdown-menu-border: rgb(20, 20, 20);
+  --background-footer-rgb: #f3f4f6;
+
+  --background-card: #eff6ff;
+  --border-card: #334155;
+  --background-card-secondary: #e5e7eb;
+
+  --navbar-min-height: 45px;
+
+  --dropdown-menu-border: #141414;
 }
 
 @theme inline {
@@ -25,7 +33,7 @@
     --background: #0f172a;
 
     --font-color-primary: #f8fafc;
-    --font-color-secondary: #94a3b8;
+    --font-color-secondary: #d1d5dc;
 
     --background-navbar-rgb: #1e293b;
     --background-navbar-hover-rgb: #073e62;

@@ -21,7 +21,7 @@ export default function StudiesCard({
       {link && (
         <a
           href={link}
-          className="text-blue-500 underline text-center break-all md:break-normal my-2"
+          className="text-blue-500 underline text-center break-all my-2"
         >
           {link}
         </a>
