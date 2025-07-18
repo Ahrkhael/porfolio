@@ -25,6 +25,7 @@ export default function ProjectCard({
           src={imageUrl}
           alt={imageAlt}
           fill
+          sizes="100vw"
           placeholder={blurDataURL ? "blur" : "empty"}
           blurDataURL={blurDataURL}
           className="object-cover rounded-md"
