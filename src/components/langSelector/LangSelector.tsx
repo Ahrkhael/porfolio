@@ -47,6 +47,7 @@ const LangSelector = () => {
             className={`flex justify-center items-center h-[50px] px-4 py-2 border border-(--dropdown-menu-border) hover:bg-(--background-navbar-hover-rgb) text-[18px] hover:text-(--font-color-menu-secondary) ${
               locale === currentLocale ? "pointer-events-none opacity-50" : ""
             }`}
+            scroll={false}
           >
             <div className="w-5 h-3 relative mr-2">
               <Image
