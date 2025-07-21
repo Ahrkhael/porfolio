@@ -41,7 +41,7 @@ export async function generateMetadata({
     },
     description: t("Description"),
     alternates: {
-      canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}`,
+      canonical: `${process.env.NEXT_PUBLIC_BASE_URL}`,
       languages: {
         en: `${process.env.NEXT_PUBLIC_BASE_URL}/en`,
         es: `${process.env.NEXT_PUBLIC_BASE_URL}/es`,
