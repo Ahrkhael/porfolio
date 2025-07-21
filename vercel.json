@@ -1,0 +1,10 @@
+{
+  "git": {
+    "deploymentEnabled": {
+      "dev_branch": false,
+      "feature/improveSEO": false,
+      "feature/downloadCV": false,
+      "feature/add_lqip": false
+    }
+  }
+}

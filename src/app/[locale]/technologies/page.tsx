@@ -23,7 +23,7 @@ export async function generateMetadata({
     title: t("TechnologiesTitle"),
     description: t("TechnologiesDescription"),
     alternates: {
-      canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/technologies`,
+      canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/technologies`,
       languages: {
         en: `${process.env.NEXT_PUBLIC_BASE_URL}/en/technologies`,
         es: `${process.env.NEXT_PUBLIC_BASE_URL}/es/technologies`,
