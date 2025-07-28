@@ -18,43 +18,104 @@ type AccordionData = {
 
 export default function AccordionGroup({ data }: { data: AccordionData[] }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [selectedTech, setSelectedTech] = useState<{
+    groupIndex: number;
+    techIndex: number;
+  } | null>(null);
 
   const handleToggle = (index: number) => {
     setOpenIndex((prev) => (prev === index ? null : index));
   };
 
+  const handleSelectTech = (groupIndex: number, techIndex: number) => {
+    setSelectedTech((prev) =>
+      prev?.groupIndex === groupIndex && prev.techIndex === techIndex
+        ? null
+        : { groupIndex, techIndex }
+    );
+  };
+
   return (
     <>
-      {data.map((section, index) => (
-        <Accordion
-          key={index}
-          title={section.title}
-          isOpen={openIndex === index}
-          onToggle={() => handleToggle(index)}
-          className="flex flex-col md:grid md:grid-cols-6 place-items-center gap-x-10 gap-y-20"
-        >
-          {section.items.map((tech, idx) => (
-            <div className="contents" key={idx}>
-              <div className="md:col-span-1">
-                <IconsWithTitle
-                  src={tech.iconSrc}
-                  width={50}
-                  height={50}
-                  alt={tech.iconAlt}
-                  title={tech.title}
-                />
+      {data.map((section, groupIndex) => {
+        const selected =
+          selectedTech?.groupIndex === groupIndex
+            ? section.items[selectedTech.techIndex]
+            : null;
+
+        const otherTech = section.items.filter(
+          (_, i) => i !== selectedTech?.techIndex
+        );
+
+        return (
+          <Accordion
+            key={groupIndex}
+            title={section.title}
+            isOpen={openIndex === groupIndex}
+            onToggle={() => handleToggle(groupIndex)}
+          >
+            {selected ? (
+              <div className="flex flex-col gap-6 transition-all duration-300">
+                <div className="flex flex-col md:flex-row items-center gap-6">
+                  <IconsWithTitle
+                    src={selected.iconSrc}
+                    width={60}
+                    height={60}
+                    alt={selected.iconAlt}
+                    title={selected.title}
+                  />
+                  <div className="flex-1 border border-[var(--border-card)] m-4 p-6 text-justify">
+                    {selected.descriptions.map((desc, i) => (
+                      <p key={i} className="text-[18px] mb-2">
+                        {desc}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap items-center justify-around gap-4">
+                  {otherTech.map((tech, techIndex) => {
+                    const actualIndex = section.items.indexOf(tech);
+                    return (
+                      <button
+                        key={techIndex}
+                        onClick={() =>
+                          handleSelectTech(groupIndex, actualIndex)
+                        }
+                      >
+                        <IconsWithTitle
+                          src={tech.iconSrc}
+                          width={50}
+                          height={50}
+                          alt={tech.iconAlt}
+                          title={tech.title}
+                        />
+                      </button>
+                    );
+                  })}
+                </div>
               </div>
-              <div className="md:col-span-5 w-full h-full text-justify border border-[var(--border-card)]">
-                {tech.descriptions.map((desc, dIdx) => (
-                  <p key={dIdx} className="text-[20px] my-2 px-6 md:pr-20">
-                    {desc}
-                  </p>
+            ) : (
+              <div className="flex flex-wrap justify-around gap-4">
+                {section.items.map((tech, techIndex) => (
+                  <button
+                    key={techIndex}
+                    onClick={() => handleSelectTech(groupIndex, techIndex)}
+                  >
+                    <IconsWithTitle
+                      src={tech.iconSrc}
+                      width={50}
+                      height={50}
+                      alt={tech.iconAlt}
+                      title={tech.title}
+                    />
+                  </button>
                 ))}
               </div>
-            </div>
-          ))}
-        </Accordion>
-      ))}
+            )}
+          </Accordion>
+        );
+      })}
     </>
   );
 }

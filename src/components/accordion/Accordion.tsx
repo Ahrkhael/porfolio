@@ -5,7 +5,6 @@ import { ReactNode, useRef, useState, useEffect } from "react";
 type AccordionProps = {
   title?: string;
   children: ReactNode;
-  className?: string;
   isOpen: boolean;
   onToggle: () => void;
 };
@@ -13,7 +12,6 @@ type AccordionProps = {
 export default function Accordion({
   title,
   children,
-  className = "",
   isOpen,
   onToggle,
 }: AccordionProps) {
@@ -22,7 +20,8 @@ export default function Accordion({
 
   useEffect(() => {
     if (contentRef.current) {
-      setHeight(isOpen ? contentRef.current.scrollHeight : 0);
+      const newHeight = isOpen ? contentRef.current.scrollHeight : 0;
+      setHeight((prev) => (prev !== newHeight ? newHeight : prev));
     }
   }, [isOpen, children]);
 
@@ -37,7 +36,7 @@ export default function Accordion({
         onClick={onToggle}
         className="sticky top-[10dvh] z-[5] w-full flex justify-between items-center px-[5dvw] py-6 bg-[var(--background-card)] text-[36px] border border-[var(--border-card)] font-medium hover:cursor-pointer hover:text-blue-400"
       >
-        <span className="flex-1 text-center">{title}</span>
+        <h2 className="flex-1 text-center">{title}</h2>
         <span className={`transition-transform ${isOpen ? "rotate-180" : ""}`}>
           ▼
         </span>
@@ -51,7 +50,7 @@ export default function Accordion({
         }}
         className={`overflow-hidden bg-[var(--background-card)]`}
       >
-        <div className={`py-10 px-[5dvw] ${className}`}>{children}</div>
+        {children}
       </div>
     </div>
   );
