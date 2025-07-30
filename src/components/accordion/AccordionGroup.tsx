@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Accordion from "./Accordion";
 import IconsWithTitle from "../iconsWithTitle/IconsWithTitle";
 
@@ -22,6 +22,26 @@ export default function AccordionGroup({ data }: { data: AccordionData[] }) {
     groupIndex: number;
     techIndex: number;
   } | null>(null);
+
+  const contentRef = useRef<HTMLDivElement>(null);
+  const divTechNoSelected = useRef<HTMLDivElement>(null);
+  const [height, setHeight] = useState(0);
+
+  useEffect(() => {
+    if (openIndex === null) {
+      setHeight(0);
+    } else {
+      if (contentRef.current) {
+        const newHeight = contentRef.current.scrollHeight;
+        console.log(newHeight);
+        setHeight((prev) => (prev !== newHeight ? newHeight : prev));
+      } else if (divTechNoSelected.current) {
+        const newHeight = divTechNoSelected.current.scrollHeight;
+        console.log(newHeight);
+        setHeight((prev) => (prev !== newHeight ? newHeight : prev));
+      }
+    }
+  }, [openIndex, selectedTech]);
 
   const handleToggle = (index: number) => {
     setOpenIndex((prev) => (prev === index ? null : index));
@@ -52,10 +72,14 @@ export default function AccordionGroup({ data }: { data: AccordionData[] }) {
             key={groupIndex}
             title={section.title}
             isOpen={openIndex === groupIndex}
+            height={height}
             onToggle={() => handleToggle(groupIndex)}
           >
             {selected ? (
-              <div className="flex flex-col gap-6 transition-all duration-300">
+              <div
+                ref={contentRef}
+                className="flex flex-col gap-6 transition-all duration-300"
+              >
                 <div className="flex flex-col md:flex-row items-center gap-6">
                   <IconsWithTitle
                     src={selected.iconSrc}
@@ -96,7 +120,10 @@ export default function AccordionGroup({ data }: { data: AccordionData[] }) {
                 </div>
               </div>
             ) : (
-              <div className="flex flex-wrap justify-around gap-4">
+              <div
+                ref={divTechNoSelected}
+                className="flex flex-wrap justify-around gap-4"
+              >
                 {section.items.map((tech, techIndex) => (
                   <button
                     key={techIndex}

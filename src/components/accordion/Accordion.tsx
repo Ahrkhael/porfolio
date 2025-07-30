@@ -1,11 +1,12 @@
 "use client";
 
-import { ReactNode, useRef, useState, useEffect } from "react";
+import { ReactNode, useState, useEffect } from "react";
 
 type AccordionProps = {
   title?: string;
   children: ReactNode;
   isOpen: boolean;
+  height: number;
   onToggle: () => void;
 };
 
@@ -13,17 +14,15 @@ export default function Accordion({
   title,
   children,
   isOpen,
+  height,
   onToggle,
 }: AccordionProps) {
-  const contentRef = useRef<HTMLDivElement>(null);
-  const [height, setHeight] = useState(0);
+  const [divHeight, setDivHeight] = useState(0);
 
   useEffect(() => {
-    if (contentRef.current) {
-      const newHeight = isOpen ? contentRef.current.scrollHeight : 0;
-      setHeight((prev) => (prev !== newHeight ? newHeight : prev));
-    }
-  }, [isOpen, children]);
+    const newHeight = isOpen ? height : 0;
+    setDivHeight((prev) => (prev !== newHeight ? newHeight : prev));
+  }, [isOpen, height, children]);
 
   return (
     <div className="mx-5 md:mx-[5dvw] my-10 rounded-lg">
@@ -43,9 +42,8 @@ export default function Accordion({
       </button>
 
       <div
-        ref={contentRef}
         style={{
-          height: height,
+          height: divHeight,
           transition: "height 0.4s ease",
         }}
         className={`overflow-hidden bg-[var(--background-card)]`}
