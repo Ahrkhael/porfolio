@@ -1,28 +1,47 @@
 "use client";
 
-import { ReactNode, useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import IconsWithTitle from "../iconsWithTitle/IconsWithTitle";
 
-type AccordionProps = {
-  title?: string;
-  children: ReactNode;
-  isOpen: boolean;
-  height: number;
-  onToggle: () => void;
+type TechItem = {
+  title: string;
+  iconSrc: string;
+  iconAlt: string;
+  descriptions: string[];
 };
 
-export default function Accordion({
-  title,
-  children,
-  isOpen,
-  height,
-  onToggle,
-}: AccordionProps) {
-  const [divHeight, setDivHeight] = useState(0);
+type AccordionData = {
+  title: string;
+  items: TechItem[];
+};
+
+export default function Accordion({ title, items }: AccordionData) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const divElement = useRef<HTMLDivElement>(null);
+  const [height, setHeight] = useState(0);
+
+  const [selectedTech, setSelectedTech] = useState<TechItem | null>(null);
 
   useEffect(() => {
-    const newHeight = isOpen ? height : 0;
-    setDivHeight((prev) => (prev !== newHeight ? newHeight : prev));
-  }, [isOpen, height, children]);
+    if (isOpen && divElement.current) {
+      setHeight(divElement.current.scrollHeight);
+    } else {
+      setHeight(0);
+    }
+  }, [isOpen, selectedTech]);
+
+  const handleToggle = () => {
+    setIsOpen((prev) => (prev === true ? false : true));
+  };
+
+  const handleSelectTech = (tech: TechItem) => {
+    if (selectedTech && selectedTech.title === tech.title) {
+      setSelectedTech(null);
+      return;
+    }
+    setSelectedTech(tech);
+  };
 
   return (
     <div className="mx-5 md:mx-[5dvw] my-10 rounded-lg">
@@ -32,7 +51,7 @@ export default function Accordion({
       />
 
       <button
-        onClick={onToggle}
+        onClick={handleToggle}
         className="sticky top-[10dvh] z-[5] w-full flex justify-between items-center px-[5dvw] py-6 bg-[var(--background-card)] text-[36px] border border-[var(--border-card)] font-medium hover:cursor-pointer hover:text-blue-400"
       >
         <h2 className="flex-1 text-center">{title}</h2>
@@ -43,12 +62,67 @@ export default function Accordion({
 
       <div
         style={{
-          height: divHeight,
-          transition: "height 0.4s ease",
+          height: `${height}px`,
+          transition: "height 0.5s ease",
         }}
         className={`overflow-hidden bg-[var(--background-card)]`}
       >
-        {children}
+        <div ref={divElement}>
+          {selectedTech ? (
+            <>
+              <div className="flex flex-col md:flex-row items-center px-6 gap-6">
+                <button onClick={() => handleSelectTech(selectedTech)}>
+                  <IconsWithTitle
+                    src={selectedTech.iconSrc}
+                    width={60}
+                    height={60}
+                    alt={selectedTech.iconAlt}
+                    title={selectedTech.title}
+                  />
+                </button>
+                <div className="flex-1 border border-[var(--border-card)] my-4 p-6 text-justify">
+                  {selectedTech.descriptions.map((desc, i) => (
+                    <p key={i} className="text-[18px] mb-2">
+                      {desc}
+                    </p>
+                  ))}
+                </div>
+              </div>
+
+              <div className="flex flex-wrap items-center justify-around gap-4">
+                {items.map((tech, i) => {
+                  return (
+                    <button key={i} onClick={() => handleSelectTech(tech)}>
+                      <IconsWithTitle
+                        src={tech.iconSrc}
+                        width={60}
+                        height={60}
+                        alt={tech.iconAlt}
+                        title={tech.title}
+                      />
+                    </button>
+                  );
+                })}
+              </div>
+            </>
+          ) : (
+            <div className="flex flex-wrap items-center justify-around gap-4">
+              {items.map((tech, i) => {
+                return (
+                  <button key={i} onClick={() => handleSelectTech(tech)}>
+                    <IconsWithTitle
+                      src={tech.iconSrc}
+                      width={60}
+                      height={60}
+                      alt={tech.iconAlt}
+                      title={tech.title}
+                    />
+                  </button>
+                );
+              })}
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
