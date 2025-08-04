@@ -18,6 +18,10 @@ type AccordionData = {
 export default function Accordion({ title, items }: AccordionData) {
   const [isOpen, setIsOpen] = useState(false);
 
+  const divPlaceholder = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const divParent = useRef<HTMLDivElement>(null);
+
   const divElement = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
 
@@ -30,6 +34,28 @@ export default function Accordion({ title, items }: AccordionData) {
       setHeight(0);
     }
   }, [isOpen, selectedTech]);
+
+  useEffect(() => {
+    if (
+      selectedTech &&
+      divElement.current &&
+      buttonRef.current &&
+      divPlaceholder.current &&
+      divParent.current
+    ) {
+      const container = divElement.current;
+
+      const buttonElement = buttonRef.current;
+
+      const y =
+        container.getBoundingClientRect().top + // Distance to top of the screen - Container
+        window.scrollY - // Scroll by the user
+        buttonElement.offsetHeight - // Height of the button
+        buttonElement.getBoundingClientRect().top - // Distance to top of the screen - Button
+        divPlaceholder.current.offsetHeight; // Height of the div divPlaceholder
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  }, [selectedTech]);
 
   const handleToggle = () => {
     setIsOpen((prev) => (prev === true ? false : true));
@@ -44,13 +70,15 @@ export default function Accordion({ title, items }: AccordionData) {
   };
 
   return (
-    <div className="mx-5 md:mx-[5dvw] my-10 rounded-lg">
+    <div ref={divParent} className="mx-5 md:mx-[5dvw] my-10 rounded-lg">
       <div
+        ref={divPlaceholder}
         className="h-[3dvh] bg-[var(--background)] sticky top-[7dvh] z-[5]"
         aria-hidden="true"
       />
 
       <button
+        ref={buttonRef}
         onClick={handleToggle}
         className="sticky top-[10dvh] z-[5] w-full flex justify-between items-center px-[5dvw] py-6 bg-[var(--background-card)] text-[36px] border border-[var(--border-card)] font-medium hover:cursor-pointer hover:text-blue-400"
       >
