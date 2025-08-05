@@ -1,4 +1,4 @@
-import Accordion from "@/components/accordion/Accordion";
+import AccordionList from "@/components/accordion/AccordionList";
 import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { Metadata } from "next";
@@ -177,11 +177,7 @@ export default function TechnologiesPage() {
 
   return (
     <main className="my-[7dvh] py-5">
-      {data.map((techGroup, i) => {
-        return (
-          <Accordion key={i} title={techGroup.title} items={techGroup.items} />
-        );
-      })}
+      <AccordionList data={data} />
     </main>
   );
 }
