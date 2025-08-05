@@ -13,14 +13,17 @@ type TechItem = {
 type AccordionData = {
   title: string;
   items: TechItem[];
+  isOpen: boolean;
+  onToggle: () => void;
 };
 
-export default function Accordion({ title, items }: AccordionData) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const divPlaceholder = useRef<HTMLDivElement>(null);
+export default function Accordion({
+  title,
+  items,
+  isOpen,
+  onToggle,
+}: AccordionData) {
   const buttonRef = useRef<HTMLButtonElement>(null);
-  const divParent = useRef<HTMLDivElement>(null);
 
   const divElement = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
@@ -32,17 +35,12 @@ export default function Accordion({ title, items }: AccordionData) {
       setHeight(divElement.current.scrollHeight);
     } else {
       setHeight(0);
+      setSelectedTech(null);
     }
   }, [isOpen, selectedTech]);
 
   useEffect(() => {
-    if (
-      selectedTech &&
-      divElement.current &&
-      buttonRef.current &&
-      divPlaceholder.current &&
-      divParent.current
-    ) {
+    if (selectedTech && divElement.current && buttonRef.current) {
       const container = divElement.current;
 
       const buttonElement = buttonRef.current;
@@ -51,15 +49,10 @@ export default function Accordion({ title, items }: AccordionData) {
         container.getBoundingClientRect().top + // Distance to top of the screen - Container
         window.scrollY - // Scroll by the user
         buttonElement.offsetHeight - // Height of the button
-        buttonElement.getBoundingClientRect().top - // Distance to top of the screen - Button
-        divPlaceholder.current.offsetHeight; // Height of the div divPlaceholder
+        buttonElement.getBoundingClientRect().top; // Distance to top of the screen - Button
       window.scrollTo({ top: y, behavior: "smooth" });
     }
   }, [selectedTech]);
-
-  const handleToggle = () => {
-    setIsOpen((prev) => (prev === true ? false : true));
-  };
 
   const handleSelectTech = (tech: TechItem) => {
     if (selectedTech && selectedTech.title === tech.title) {
@@ -70,16 +63,15 @@ export default function Accordion({ title, items }: AccordionData) {
   };
 
   return (
-    <div ref={divParent} className="mx-5 md:mx-[5dvw] my-10 rounded-lg">
+    <div className="mx-5 md:mx-[5dvw] my-10 rounded-lg">
       <div
-        ref={divPlaceholder}
         className="h-[3dvh] bg-[var(--background)] sticky top-[7dvh] z-[5]"
         aria-hidden="true"
       />
 
       <button
         ref={buttonRef}
-        onClick={handleToggle}
+        onClick={onToggle}
         className="sticky top-[10dvh] z-[5] w-full flex justify-between items-center px-[5dvw] py-6 bg-[var(--background-card)] text-[36px] border border-[var(--border-card)] font-medium hover:cursor-pointer hover:text-blue-400"
       >
         <h2 className="flex-1 text-center">{title}</h2>
