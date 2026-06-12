@@ -12,10 +12,10 @@
     "clsx": "^2.1.1",
     "lqip-modern": "^2.2.1",
     "sharp": "0.33.5",
-    "next": "15.3.2",
+    "next": "15.3.6",
     "next-intl": "^4.1.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
